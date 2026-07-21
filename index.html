@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="Sriya Vempati — UX Designer">
+<meta property="og:title" content="StudioVem — Sriya Vempati Design Portfolio">
+<meta property="og:description" content="UX Designer crafting experiences at the intersection of culture, craft, and clarity.">
+<meta property="og:image" content="images/logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudioVem — Sriya Vempati Design Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sriya-vempati-portfolio.css">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Grain filter -->
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+  <defs>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="overlay" result="blend"/>
+      <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+</svg>
+
+<div class="cursor" id="cursor"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">StudioVem — Sriya Vempati</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://calendly.com/sreesriya-vempati/30min" class="nav-cta"
+       onclick="if (window.Calendly) { Calendly.initPopupWidget({url: 'https://calendly.com/sreesriya-vempati/30min'}); return false; }">
+      Book a Call
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg" id="heroBg"></div>
+  <img src="images/logo.png" alt="StudioVem logo" class="hero-logo">
+  <!-- Hidden for now — remove style="display:none" to bring this back -->
+  <p class="hero-eyebrow" style="display:none;">Design Portfolio · 2026</p>
+  <h1 class="hero-name">Sriya <em>Vempati</em></h1>
+  <p class="hero-sub">Branding and UX Designer helping <em>founders and businesses</em> build brands people trust.</p>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>User Experience</span><span class="dot">✦</span>
+    <span>Graphic Design</span><span class="dot">✦</span>
+    <span>Typography</span><span class="dot">✦</span>
+    <span>Illustration</span><span class="dot">✦</span>
+    <span>Brand Identity</span><span class="dot">✦</span>
+    <span>Visual Systems</span><span class="dot">✦</span>
+    <span>Animation</span><span class="dot">✦</span>
+    <span>User Experience</span><span class="dot">✦</span>
+    <span>Graphic Design</span><span class="dot">✦</span>
+    <span>Typography</span><span class="dot">✦</span>
+    <span>Illustration</span><span class="dot">✦</span>
+    <span>Brand Identity</span><span class="dot">✦</span>
+    <span>Visual Systems</span><span class="dot">✦</span>
+    <span>Animation</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- WHO WE HELP -->
+<section id="who-we-help">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Who StudioVem Helps</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <p class="about-bio reveal" style="max-width:680px; margin-bottom:3rem;">
+    StudioVem helps founders and businesses communicate clearly through <em>strategic branding, UX, and visual design.</em> Every project is built to earn <em>trust</em>, strengthen your <em>brand</em>, and support long-term <em>growth</em>. </p>
+
+  <div class="phase-grid">
+    <div class="phase-card reveal">
+      <h3 class="phase-title">Founders</h3>
+      <p class="phase-list" style="list-style:none;">Launching something new? I help you build a brand
+      and product experience that earns trust from day one—so you're not starting from zero with every
+      new customer.</p>
+    </div>
+    <div class="phase-card reveal">
+      <h3 class="phase-title">Small Businesses</h3>
+      <p class="phase-list" style="list-style:none;">Need to look as established as you actually are?
+      I design identities and digital experiences that make your business feel professional, credible,
+      and easy to trust.</p>
+    </div>
+    <div class="phase-card reveal">
+      <h3 class="phase-title">Hiring Managers &amp; Teams</h3>
+      <p class="phase-list" style="list-style:none;">Looking for a design partner who thinks strategically
+      and communicates clearly? Explore the case studies below to see how I work, not just what I made.</p>
+    </div>
+  </div>
+
+  <div class="reveal" style="text-align:center; margin-top:3rem;">
+    <a href="#work" class="cta-button">View My Work ↓</a>
+  </div>
+</section><!-- /who-we-help -->
+
+<!-- SERVICES -->
+<section id="services" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Services</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <p class="about-bio reveal" style="max-width:640px; margin-bottom:3rem;">
+    Every project starts from the same place. Understanding <em>what you're trying to say</em> and <em> who you're saying it to.</em>
+    From there, I work with you at whatever stage your business is in.
+  </p>
+
+  <div class="phase-grid">
+
+    <div class="phase-card reveal">
+      <h3 class="phase-title">Launch</h3>
+      <ul class="phase-list">
+        <li>Logo &amp; mark design</li>
+        <li>Color &amp; typography systems</li>
+        <li>Brand guidelines</li>
+        <li>Stationery &amp; collateral</li>
+      </ul>
+      <div class="phase-deliverables">
+        <strong>Good for</strong>
+        New businesses or rebrands that need a distinct, cohesive identity from day one
+      </div>
+    </div>
+
+    <div class="phase-card reveal">
+      <h3 class="phase-title">Grow</h3>
+      <ul class="phase-list">
+        <li>Research &amp; user personas</li>
+        <li>Information architecture</li>
+        <li>Wireframes &amp; prototypes</li>
+        <li>Responsive UI design</li>
+      </ul>
+      <div class="phase-deliverables">
+        <strong>Good for</strong>
+        Websites, apps, and digital products that need to feel effortless to use
+      </div>
+    </div>
+
+    <div class="phase-card reveal">
+      <h3 class="phase-title">Scale</h3>
+      <ul class="phase-list">
+        <li>Ongoing brand &amp; campaign support</li>
+        <li>Publication &amp; editorial design</li>
+        <li>Seasonal &amp; product-launch assets</li>
+      </ul>
+      <div class="phase-deliverables">
+        <strong>Good for</strong>
+        Businesses that want a long-term creative partnership, not a one-off project
+      </div>
+    </div>
+
+  </div>
+
+  <div class="reveal" style="margin-top:3rem; text-align:center;">
+    <a href="https://calendly.com/sreesriya-vempati/30min" class="cta-button"
+       onclick="if (window.Calendly) { Calendly.initPopupWidget({url: 'https://calendly.com/sreesriya-vempati/30min'}); return false; }">Sound like you? Schedule a free call to learn more →</a>
+  </div>
+</section><!-- /services -->
+
+
+<!-- WORK SECTION -->
+<section id="work">
+  <div class="section-header reveal">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Featured Work</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- FILTER TABS -->
+  <div class="filter-bar reveal" id="filterBar">
+    <button class="filter-btn active" data-filter="all"><span>All</span></button>
+    <button class="filter-btn" data-filter="ux"><span>User Experience</span></button>
+    <!--<button class="filter-btn" data-filter="typography"><span>Typography</span></button>-->
+    <button class="filter-btn" data-filter="brand-identity"><span>Brand Identity</span></button>
+    <button class="filter-btn" data-filter="editorial"><span>Editorial</span></button>
+    <button class="filter-btn" data-filter="animation"><span>Animation</span></button>
+  </div>
+
+  <!-- PROJECT GRID -->
+  <div class="projects-grid" id="projectGrid">
+
+    <!-- Salon Forte -->
+    <div class="project-card wide reveal" data-cat="brand-identity" data-project="salonforte"
+       onclick="openModal('salonforte')">
+      <div class="project-card-placeholder">
+        <img class="project-card-img" src="images/SF/business-card.png" alt="salonforte">
+      </div>
+      <!--<span class="project-card-label">UX Design</span>-->
+      <div class="project-overlay">
+        <p class="project-tag">Brand Identity <span class="project-worktype">· Client Work</span></p>
+        <h3 class="project-name">Salon Forte</h3>
+        <p class="project-desc">Brand Identity system made for a client. Hair Stylist, Julia Ayasha was looking for something thats fun with personality yet, professional.</p>
+      </div>
+    </div>
+
+    <!-- VIBE Lab -->
+    <div class="project-card reveal" data-cat="brand-identity typography" data-project="vibe"
+      onclick="openModal('vibe')">
+      <div class="project-card-placeholder">
+        <img class="project-card-img" src="images/VIBE/logo copy.jpg" alt="VIBE Lab">
+      </div>
+      <!--<span class="project-card-label">Brand Identity</span>-->
+      <div class="project-overlay">
+        <p class="project-tag">Brand Identity <span class="project-worktype">· Course Work</span></p>
+        <h3 class="project-name">VIBE Lab</h3>
+        <p class="project-desc">A newsletter for Designers to connect. This project showcases the branding for this project.</p>
+      </div>
+    </div>
+
+    <!-- Goldsfield -->
+    <div class="project-card wide reveal" data-cat="ux" data-project="goldsfield"
+       onclick="openModal('goldsfield')">
+      <div class="project-card-placeholder">
+        <img class="project-card-img" src="images/gold/TITLE SLIDE.png" alt="Goldfield">
+      </div>
+      <!--<span class="project-card-label">UX Design</span>-->
+      <div class="project-overlay">
+        <p class="project-tag">User Experience <span class="project-worktype">· Group Work</span></p>
+        <h3 class="project-name">Goldsfield Ghost Town</h3>
+        <p class="project-desc">A full digital redesign of an Old West destination—balancing modern UX with historic character.</p>
+      </div>
+    </div>
+
+    <!-- Bottle Riot -->
+    <div class="project-card reveal" data-cat="brand-identity" data-project="bottleriot"
+     onclick="openModal('bottleriot')">
+      <div class="project-card-placeholder">
+        <img class="project-card-img" src="images/bottleriotcover.png" alt="Bottle Riot">
+      </div>
+      <!--<span class="project-card-label">Brand Identity</span>-->
+      <div class="award-badge">
+        <span class="award-badge-title">Graphis 2023</span>
+        <span class="award-badge-sub">Honorable Mention</span>
+      </div>
+      <div class="project-overlay">
+        <p class="project-tag">Brand Identity <span class="project-worktype">· Course Work</span></p>
+        <h3 class="project-name">Bottle Riot</h3>
+        <p class="project-desc">Honorable Mention — Graphis 2023. A bold rebrand for an Asheville wine bar and listening lounge.</p>
+      </div>
+    </div>
+
+    <!-- Urban Indian -->
+    <div class="project-card reveal" data-cat="brand-identity" data-project="urbanindian"
+      onclick="openModal('urbanindian')">
+      <div class="project-card-placeholder">
+        <img class="project-card-img" src="images/tuicover.png" alt="The Urban Indian">
+      </div>
+      <!--<span class="project-card-label">Brand Identity</span>-->
+      <div class="project-overlay">
+        <p class="project-tag">Brand Identity <span class="project-worktype">· Course Work</span></p>
+        <h3 class="project-name">The Urban Indian</h3>
+        <p class="project-desc">A contemporary fashion label fusing traditional Indian aesthetics with modern streetwear.</p>
+      </div>
+    </div>
+
+    <!-- Work / Risograph -->
+    <div class="project-card reveal" data-cat="animation" data-project="work"
+      onclick="openModal('work')">
+      <div class="project-card-placeholder">
+        <img class="project-card-img" src="images/work poster.png" alt="Risograph Poster">
+      </div>
+      <!--<span class="project-card-label">Animation</span>-->
+      <div class="project-overlay">
+        <p class="project-tag">Animation · Print <span class="project-worktype">· Course Work</span></p>
+        <h3 class="project-name">Work — Risograph</h3>
+        <p class="project-desc">A poster and animation created with a risograph, referencing Corita's 10 Rules.</p>
+      </div>
+    </div>
+
+    <!-- Jiayue Yu -->
+    <div class="project-card reveal" data-cat="editorial typography" data-project="ai"
+      onclick="openModal('ai')">
+      <div class="project-card-placeholder">
+        <img class="project-card-img" src="images/Jiayue Yu/jiyayu mockup1.png" alt="Jiayue Yu">
+      </div>
+      <!--<span class="project-card-label">Editorial</span>-->
+      <div class="project-overlay">
+        <p class="project-tag">Editorial Design · Typography <span class="project-worktype">· Course Work</span></p>
+        <h3 class="project-name">Jiayue Yu</h3>
+        <p class="project-desc">An editorial publication exploring what it means for a short story to be authored by an AI.</p>
+      </div>
+    </div>
+
+  </div><!-- /projects-grid -->
+</section><!-- /work -->
+
+
+<!-- PROCESS -->
+<section id="process" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Process</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <p class="about-bio reveal" style="max-width:640px; margin-bottom:3rem;">
+    Every project starts with strategy. Understanding your <em>goals, audience, and challenges </em>ensures every design decision has purpose.
+  </p>
+
+  <div class="phase-grid phase-grid-3">
+
+    <div class="phase-card reveal">
+      <div class="phase-num">01</div>
+      <h3 class="phase-title">Discovery</h3>
+      <ul class="phase-list">
+        <li>Intro conversation</li>
+        <li>Goals &amp; audience</li>
+        <li>Competitor landscape</li>
+        <li>Existing assets audit</li>
+      </ul>
+      <div class="phase-deliverables">
+        <strong>You receive</strong>
+        Discovery summary, project roadmap, timeline
+      </div>
+    </div>
+
+    <div class="phase-card reveal">
+      <div class="phase-num">02</div>
+      <h3 class="phase-title">Strategy</h3>
+      <ul class="phase-list">
+        <li>What are we communicating?</li>
+        <li>Who are we speaking to?</li>
+        <li>What should people feel?</li>
+      </ul>
+      <div class="phase-deliverables">
+        <strong>You receive</strong>
+        Creative brief, brand direction, site or system architecture
+      </div>
+    </div>
+
+    <div class="phase-card reveal">
+      <div class="phase-num">03</div>
+      <h3 class="phase-title">Exploration</h3>
+      <ul class="phase-list">
+        <li>Sketches &amp; moodboards</li>
+        <li>Early concepts</li>
+        <li>Wireframes &amp; references</li>
+      </ul>
+      <div class="phase-deliverables">
+        <strong>You receive</strong>
+        A handful of directions worth reacting to—not fifty options
+      </div>
+    </div>
+
+    <div class="phase-card reveal">
+      <div class="phase-num">04</div>
+      <h3 class="phase-title">Design</h3>
+      <ul class="phase-list">
+        <li>Iterations on the chosen direction</li>
+        <li>Structured feedback rounds</li>
+        <li>Refinement &amp; decision-making</li>
+      </ul>
+      <div class="phase-deliverables">
+        <strong>You receive</strong>
+        Polished, near-final designs at each checkpoint
+      </div>
+    </div>
+
+    <div class="phase-card reveal">
+      <div class="phase-num">05</div>
+      <h3 class="phase-title">Delivery</h3>
+      <ul class="phase-list">
+        <li>Brand guidelines</li>
+        <li>Final assets &amp; source files</li>
+        <li>Developer or print handoff</li>
+      </ul>
+      <div class="phase-deliverables">
+        <strong>You receive</strong>
+        Figma, AI, and PDF files, plus ready-to-use social assets
+      </div>
+    </div>
+
+    <div class="phase-card reveal">
+      <div class="phase-num">06</div>
+      <h3 class="phase-title">Growth</h3>
+      <ul class="phase-list">
+        <li>Ongoing design support</li>
+        <li>New campaigns &amp; launches</li>
+        <li>Seasonal &amp; UX updates</li>
+      </ul>
+      <div class="phase-deliverables">
+        <strong>You receive</strong>
+        A design partner who sticks around after launch
+      </div>
+    </div>
+
+  </div>
+
+  <p class="faq-heading reveal">FAQ</p>
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>How many rounds of revisions are included?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap"><div class="faq-a-inner"><p class="faq-a">Every project includes revision rounds throughout the process. Additional revisions can always be added if needed.</p></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>How long does a typical project take?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap"><div class="faq-a-inner"><p class="faq-a">Branding projects typically take 2–4 weeks. Websites and UX projects usually take 4–8 weeks, depending on scope.</p></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>Who owns the final files?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap"><div class="faq-a-inner"><p class="faq-a">Once the project is complete and paid in full, all final deliverables belong to you.</p></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>What if I don't know exactly what I want yet?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap"><div class="faq-a-inner"><p class="faq-a">That's completely normal. Discovery is designed to help define your goals before design begins.</p></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>Can we work together remotely?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap"><div class="faq-a-inner"><p class="faq-a">Yes. StudioVem works with clients remotely through video calls, collaborative tools, and regular check-ins. Based in Dallas, Texas</p></div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>What happens after launch?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap"><div class="faq-a-inner"><p class="faq-a">Launch isn't the end. We can alwasy discuss ongoing support options.</p></div></div>
+    </div>
+  </div>
+</section><!-- /process -->
+
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-header reveal">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Testimonials</h2>
+    <div class="section-line"></div>
+  </div>
+
+    <blockquote class="pull-quote reveal" role="button" tabindex="0" aria-label="Open Salon Forte case study"
+    onclick="openModal('salonforte')"
+    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('salonforte');}">
+    <p>"I am so pleased with the final product. I can't stop bragging about it."</p>
+    <cite>— Julia Ayasha, Owner of Salon Forte</cite>
+  </blockquote>
+
+  <p class="about-detail reveal" style="text-align:center; max-width:600px; margin:2rem auto 0;">
+    More stories from clients and collaborators coming soon.
+  </p>
+</section><!-- /testimonials -->
+
+<!-- ABOUT -->
+<section id="about" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">06</span>
+    <h2 class="section-title">About</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-section">
+    <div class="about-visual reveal">
+      <img src="images/Vem.png" alt="headshot">
+    </div>
+    <div class="reveal">
+      <div class="about-logo">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <p class="about-label"> Brand Designer ·UX Designer</p>
+      <p class="about-bio">StudioVem helps businesses build brands, websites, and digital experiences that are <em>thoughtful, strategic, and built to last.</em></p>
+      <p class="about-detail">I'm Sriya Vempati, a Brand Identity and UX Designer passionate about creating work that is both functional and memorable. I believe the best design builds trust, tells a clear story, and helps businesses grow.</p>
+      <div class="skills-row">
+        <span class="skill-tag">UX Research</span>
+        <span class="skill-tag">Brand Identity</span>
+        <span class="skill-tag">Typography</span>
+        <span class="skill-tag">Illustration</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Adobe Suite</span>
+        <span class="skill-tag">Risograph</span>
+        <span class="skill-tag">Visual Systems</span>
+        <span class="skill-tag">Animation</span>
+      </div>
+      <div class="about-links">
+        <!-- TODO: replace with your real LinkedIn URL -->
+        <a href="https://www.linkedin.com/in/sreesriyavempati/" target="_blank" class="cta-button">LinkedIn ↗</a>
+        <!-- Add your resume image (and PDF) to the images folder, e.g. images/resume.png + images/resume.pdf -->
+        <a href="#" class="cta-button" onclick="event.preventDefault(); openModal('resume');">Resume ↗</a>
+      </div>
+      <div class="reveal" style="margin-top:2.5rem;">
+        <a href="https://calendly.com/sreesriya-vempati/30min" class="cta-button"
+           onclick="if (window.Calendly) { Calendly.initPopupWidget({url: 'https://calendly.com/sreesriya-vempati/30min'}); return false; }">Start Your Project →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <a href="https://calendly.com/sreesriya-vempati/30min" class="contact-cta reveal"
+     onclick="if (window.Calendly) { Calendly.initPopupWidget({url: 'https://calendly.com/sreesriya-vempati/30min'}); return false; }">
+    Let's make something <em>together.</em>
+  </a>
+</div>
+
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <p class="footer-heading">StudioVem</p>
+      <p class="footer-text">Independent Design Studio</p>
+      <p class="footer-text">Founded by Sriya Vempati</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Contact</p>
+      <p class="footer-text"><a href="mailto:sreesriya.vempati@gmail.com">sreesriya.vempati@gmail.com</a></p>
+      <p class="footer-text"><a href="tel:+14699191980">(469) 919-1980</a></p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Explore</p>
+      <p class="footer-text"><a href="#work">Work</a></p>
+      <p class="footer-text"><a href="#services">Services</a></p>
+      <p class="footer-text"><a href="#process">Process</a></p>
+      <p class="footer-text"><a href="#about">About</a></p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Elsewhere</p>
+      <!-- TODO: replace with your real LinkedIn URL -->
+      <p class="footer-text"><a href="https://www.linkedin.com/in/sreesriyavempati/" target="_blank">LinkedIn</a></p>
+      <p class="footer-text"><a href="#" onclick="event.preventDefault(); openModal('resume');">Resume</a></p>
+      <p class="footer-text"><a href="https://sreesriyavempati.myportfolio.com/" target="_blank">Original Portfolio</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Sriya Vempati</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+
+
+<!-- MODALS -->
+<div class="modal-backdrop" id="modalBackdrop" onclick="closeModal(event)">
+  <div class="modal" id="modalBox">
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+
+<!-- RESUME -->
+<template id="tpl-resume">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Resume</p>
+    <h2 class="modal-title">Sriya Vempati</h2>
+    <p class="modal-worktype">UX Designer</p>
+  </div>
+  <div class="modal-body">
+    <img src="images/resume.png" alt="Sriya Vempati resume">
+    <div class="reveal" style="margin-top:1.5rem;">
+      <a href="images/resume.pdf" target="_blank" class="cta-button">View Closer ↗</a>
+    </div>
+  </div>
+</template>
+
+<!-- MODAL TEMPLATES -->
+
+<!-- GOLDSFIELD -->
+<template id="tpl-goldsfield">
+  <div class="modal-header">
+    <p class="modal-eyebrow">User Experience · 2025</p>
+    <h2 class="modal-title">Goldsfield Ghost Town</h2>
+    <p class="modal-worktype">Group Work</p>
+  </div>
+  <div class="modal-body">
+    <img src="images/gold/prototype.jpg">
+    <p class="modal-section-head">Project Outline</p>
+    <p class="modal-text">The Goldfield Ghost Town redesign was a focused effort to modernize the site's digital presence while preserving the town's historic character. The brief prioritized three outcomes: make trip-planning fast and intuitive, strengthen the site's visual identity so it reads like a destination, and deliver a responsive, accessible experience for visitors on mobile and desktop.</p>
+    
+    <p class="modal-section-head">Research &amp; Process</p>
+    <p class="modal-text">The research phase established problems to solve and opportunities to amplify. We performed a content and IA audit, identifying duplicated pages, missing hierarchies, and unclear navigation. We then conducted a card-sorting exercise with potential users from diverse backgrounds—revealing that Camp Ground, Attractions, and Group Activities were naturally grouped together. A competitive Brand Matrix gave us context about Goldfield's position in the activity-center space.</p>
+    <div class="modal-image-grid">
+      <img src="images/gold/Persona 1.png" alt="Persona 1">
+      <img src="images/gold/Persona 2.png" alt="Persona 2">
+    </div>
+    <img src="images/gold/IA abstraction.png" alt="IA">
+    <p class="modal-section-head">Design Direction</p>
+    <p class="modal-text">The visual system leans on an earthy palette, layered textures, and type choices that nod to vintage Western signage—applied with modern typographic hierarchy and generous spacing. Component work included a responsive hero module with strong CTAs, an events calendar that prioritizes upcoming dates, modular attraction pages, and a compact ticketing summary that reduces friction.</p>
+    <div class="slideshow" id="goldsfieldSlideshow">
+      <img class="slide active" src="images/gold/TITLE SLIDE.png" alt="Title">
+      <img class="slide" src="images/gold/ORIGINAL ISSUES.png" alt="Original Issues">
+      <img class="slide" src="images/gold/VISION STATEMENT.png" alt="Vision Statement">
+      <img class="slide" src="images/gold/HOMEPAGE MIDFIDS1.png" alt="Homepage Midfids 1">
+      <img class="slide" src="images/gold/HOMEPAGE MIDFIDS.png" alt="Homepage Midfids">
+      <img class="slide" src="images/gold/ELEMENT COLLAGE.png" alt="Element Collage">
+      <img class="slide" src="images/gold/HOMEPAGE MOCKUP1.jpg" alt="Homepage Mockup 1">
+      <img class="slide" src="images/gold/HOMEPAGE MOCKUP.png" alt="Homepage Mockup">
+      <img class="slide" src="images/gold/LINKS.png" alt="Links">
+      <button class="slide-btn prev">‹</button>
+      <button class="slide-btn next">›</button>
+    </div>
+    <a class="modal-link" href="https://www.figma.com/proto/eGUdyVUvu0KW5XrQGBx5IC/Untitled?node-id=2012-793&p=f&t=cxhqM2o90Qsh5JH5-1&scaling=scale-down&content-scaling=fixed&page-id=2012%3A568" target="_blank">View Figma Prototype →</a>
+  </div>
+</template>
+
+<!-- BOTTLE RIOT -->
+<template id="tpl-bottleriot">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Graphic Design · Brand Identity · 2025</p>
+    <h2 class="modal-title">Bottle Riot</h2>
+    <p class="modal-worktype">Course Work</p>
+    <p class="modal-subtitle">Honorable Mention — Graphis 2023</p>
+  </div>
+  <div class="modal-body">
+    <img src="images/bottleriot1.png" alt="Bottle Riot Brand Board">
+    <img src="images/bottleriot2.png" alt="Bottle Riot Brand Board">
+    <p class="modal-section-head">Project Outline</p>
+    <p class="modal-text">A complete rebrand of Bottle Riot, a bar and wine shop in Asheville known for its eclectic character and vibrant community. The challenge was to create a visual system that communicated the brand's rebellious, creative spirit while feeling refined enough to represent its curated wine selection and lively social atmosphere.</p>
+    <p class="modal-section-head">Research &amp; Process</p>
+    <p class="modal-text">The research phase began with an audit of existing brand assets. I studied the local market and other independent wine bars, focusing on how design signals atmosphere, price point, and community values. Bottle Riot occupied a gap: many competitors leaned too polished or too casual, leaving space for a brand that could be bold and rebellious while still maintaining sophistication.</p>
+    <p class="modal-section-head">Design Direction</p>
+    <p class="modal-text">Mood boards explored bright, contrasting color palettes conveying energy and type treatments combining boldness with legibility. Logo explorations played with layered typography, sharp edges, and dynamic arrangements. Supporting brand elements evoked the raw energy of a gathering space celebrating individuality and community.</p>
+    <div class="modal-image-grid-br">
+      <div class="img-stationary">
+        <img src="images/BottleRiotStationary.jpg" alt="Stationary">
+      </div>
+      <div class="img-logo">
+        <img src="images/bottleriotlogo.png" alt="Logo">
+        <div class="overlay"></div>
+      </div>
+    </div>
+    <a class="modal-link" href="https://www.bottleriot.com/" target="_blank">Visit Bottle Riot →</a>
+  </div>
+</template>
+
+<!-- URBAN INDIAN -->
+<template id="tpl-urbanindian">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Graphic Design · Brand Identity · 2025</p>
+    <h2 class="modal-title">The Urban Indian</h2>
+    <p class="modal-worktype">Course Work</p>
+  </div>
+  <div class="modal-body">
+    <img src="images/tuihero.png" alt="The Urban Indian hero">
+    <p class="modal-section-head">Project Outline</p>
+    <p class="modal-text">A full brand identity redesign for The Urban Indian, a contemporary fashion label blending traditional Indian aesthetics with modern streetwear. The goal was to design a brand system that celebrated cultural heritage while feeling bold, versatile, and relevant to a global urban audience. Deliverables included three brand boards with at least seven applications of the branding.</p>
+    <p class="modal-section-head">Research &amp; Process</p>
+    <p class="modal-text">The research began with an audit of fashion and lifestyle brands that fuse culture with modernity. I studied Indian textiles, block-printing motifs, and multilingual typographic traditions. From this, I defined three key design principles: Cultural authenticity, Modern accessibility, and Scalable adaptability.</p>
+    <img src="images/tui1.jpg" alt="Urban Indian board 1" style="margin-top: 2rem;">
+    <img src="images/tui2.jpg" alt="Urban Indian board 2">
+    <img src="images/tui3.jpg" alt="Urban Indian board 3">
+  </div>
+</template>
+
+<!-- WORK / RISOGRAPH -->
+<template id="tpl-work">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Animation · Print · 2025</p>
+    <h2 class="modal-title">Work — Risograph</h2>
+    <p class="modal-worktype">Course Work</p>
+  </div>
+  <div class="modal-body">
+    <video class="modal-video" src="images/work.mp4" autoplay loop muted playsinline></video>
+    <p class="modal-section-head">Project Outline</p>
+    <p class="modal-text">The goal of this project was to create a risograph poster and animation while working within a set of predetermined constraints. A key requirement was limiting the design to only two colors selected from an eight-color risograph palette. Inspired by the 7th rule from Corita Kent's Ten Rules, the project explores the idea that consistent effort and repetition eventually lead to meaningful outcomes.</p>
+    <p class="modal-section-head">Research &amp; Process</p>
+    <p class="modal-text">This project introduced me to several new Photoshop techniques and workflows. The animation was first created in Adobe After Effects, where I developed the movement and timing of the circular forms. Individual frames were then arranged in Photoshop and separated into two color channels to prepare them for risograph printing. Through this process, I learned how digital motion design can be translated into a physical print medium while maintaining consistency across both formats.</p>
+    <p class="modal-section-head">Design Direction</p>
+    <p class="modal-text">The final design uses simple circular forms that gradually gather and organize into a unified composition. This progression acts as a visual representation of Corita Kent's message, showing how small actions accumulate into something larger over time. The limited two-color palette became an integral part of the design, creating strong visual cohesion while highlighting the layered textures and imperfections characteristic of risograph printing.</p>
+    <p class="modal-section-head">Poster Printed on the Risograph</p>
+    <img src="images/work poster.png" alt="Risograph Poster">
+    <p class="modal-section-head">Frames Printed on the Risograph</p>
+    <img src="images/work animation.png">
+    <a class="modal-link" href="https://www.corita.org/tenrules" target="_blank">Corita's 10 Rules →</a>
+    
+  </div>
+</template>
+
+<!-- JIAYUE YU -->
+<template id="tpl-ai">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Editorial · 2022</p>
+    <h2 class="modal-title">Jiayue Yu</h2>
+    <p class="modal-worktype">Course Work</p>
+  </div>
+  <div class="modal-body">
+    <img src="images/Jiayue Yu/jy banner.png">
+    <p class="modal-section-head">Project Outline</p>
+    <p class="modal-text">This editorial project is a visual artist feature focused on Jiayue Yu, a multidisciplinary artist working across photography, 3D rendering, and video. It is a three spread magazine feature. We are challenged to create something beyond our previous design skill.</p>
+    <p class="modal-section-head">Research &amp; Process</p>
+    <p class="modal-text">Research began with studying Jiayue Yu's projects, artist statements, and published interviews to understand her core themes: fatigue, desire, uncertainty, and how they appear in everyday urban and social spaces. Her work often blends constructed imagery with real environments, creating a tension between reality and simulation.
+I analyzed her series-based structure (such as In Retrospect and Worn Out Joy) to understand how she builds narrative across bodies of work. This informed the editorial pacing—alternating between dense written sections and full-bleed imagery to reflect her layered, reflective approach.
+Sketches and layout tests focused on hierarchy, readability, and rhythm between image and text. I explored how spacing and repetition could mirror her conceptual focus on repetition, memory, and emotional residue.</p>
+    <p class="modal-section-head">Design Direction</p>
+    <p class="modal-text">The design is minimal and editorial, using black text with blue accents for quotes and highlights. The title page features her name repeated in a soft blue gradient to reflect themes of repetition and memory.
+The layout is split between text and imagery, allowing her work to remain central while supporting context stays clean and structured.</p>
+    <div class="bk-viewer" id="bkViewer">
+      <div class="bk-book-outer">
+        <div class="bk-shadow"></div>
+        <div class="bk-page-wrap" id="bkPageWrap">
+          <div class="bk-spread" id="bkSpread">
+            <div class="bk-pg-left"  id="bkPgLeft"></div>
+            <div class="bk-pg-right" id="bkPgRight"></div>
+            <div class="bk-spread-spine"></div>
+            <div class="bk-flip-panel bk-flip-left"  id="bkFlipL" style="display:none">
+              <div class="bk-fp-front"></div>
+              <div class="bk-fp-back"></div>
+            </div>
+            <div class="bk-flip-panel bk-flip-right" id="bkFlipR" style="display:none">
+              <div class="bk-fp-front"></div>
+              <div class="bk-fp-back"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bk-nav-row">
+        <button class="bk-nav-btn" id="bkPrev" aria-label="Previous page" disabled>&#8249;</button>
+        <div class="bk-pips" id="bkPips"></div>
+        <button class="bk-nav-btn" id="bkNext" aria-label="Next page">&#8250;</button>
+      </div>
+      <span class="bk-page-lbl" id="bkLbl">Spread 1</span>
+    </div>
+    <div class="modal-image-grid">
+      <img src="images/Jiayue Yu/zoom1.png">
+      <img src="images/Jiayue Yu/zoom2.png">
+    </div>
+  </div>
+</template>
+
+<!-- VIBE LAB -->
+<template id="tpl-vibe">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Brand Identity · 2025</p>
+    <h2 class="modal-title">VIBE Lab</h2>
+    <p class="modal-worktype">Course Work</p>
+  </div>
+  <div class="modal-body">
+    <img src="images/VIBE/vibe.jpg" alt="vibe">
+    <p class="modal-section-head">Project Outline</p>
+    <p class="modal-text">The goal of Vibe Lab's brand identity was to create a visual and emotional system that supports emerging creatives. The intention was to design something that feels like a calm, supportive entry point into the design world. The brand needed to communicate encouragement and softness while still feeling credible enough to host resources such as job opportunities, references, and design insights. Another major goal was to build a system that could scale across editorial content in the form of newsletters, social media posts and magazines.</p>
+    <p class="modal-section-head">Research &amp; Process</p>
+    <p class="modal-text">The research focused on how creative communities and design-focused social spaces currently operate, and where they often create pressure instead of support. Many existing platforms rely on highly polished, dense, or trend-driven visuals that can unintentionally reinforce comparison and burnout. This led to reframing Vibe Lab as more of an emotional and creative environment rather than a traditional brand system. Inspiration was pulled from editorial design, zines, and collage-based layouts, where layering, imperfection, and variation create warmth and authenticity while still maintaining a sense of structure.</p>
+    <p class="modal-section-head">Design Direction</p>
+    <p class="modal-text">The final design direction is built around a flexible collage system that prioritizes variation within consistency. Instead of fixed templates, layouts adapt depending on content, while cohesion is maintained through recurring visual elements like a pastel palette derived from the logo and soft paper textures that add tactility and warmth. Typography is intentionally restrained to support clarity and emotional ease, allowing composition and imagery to lead. The overall system reflects the core idea of Vibe Lab: creativity is fluid, personal, and evolving, and the identity should feel the same way.</p>
+    <p class="modal-section-head">First Instagram Post:</p>
+    <div class="modal-image-grid">
+      <img src="images/VIBE/post_oct_22-11 copy.jpg">
+      <img src="images/VIBE/post_oct_22-12 copy.jpg">
+      <img src="images/VIBE/post_oct_22-13 copy.jpg">
+      <img src="images/VIBE/post_oct_22-14 copy.jpg">
+    </div>
+  </div>
+</template>
+
+<!-- Salon Forte -->
+<template id="tpl-salonforte">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Brand Identity · 2026</p>
+    <h2 class="modal-title">Salon Forte</h2>
+    <p class="modal-worktype">Client Work</p>
+    <div class="testimonial-toggle-wrap">
+      <button class="testimonial-toggle" type="button">
+        <span>Testimonial</span>
+        <span class="testimonial-arrow">→</span>
+      </button>
+      <div class="testimonial-a-wrap">
+        <div class="testimonial-a-inner">
+          <p class="testimonial-quote">StudioVem absolutely crushed it with my logo design! I was all over the place during our initial sit down on what direction I wanted for my logo. What was nice was that on our 2nd visit Sriya already had different sketches on how all the different elements could work together. That helped me out because it made it easier to narrow down the final design.</p>
+          <p class="testimonial-quote">Sriya was also very easy to work with. She kept an open mind to any critique I had. If I had an idea that didn't quite work, she explained in detail as to why going a different direction was better. As a client, that really instilled trust in her and made me feel confident that I would be satisfied with the final design.</p>
+          <p class="testimonial-quote">Overall, I am so pleased with the final product. I can't stop bragging about it. I would highly recommend StudioVem to anyone who needs help with any type of graphic designing.</p>
+          <cite class="testimonial-cite">— Julia Ayasha, Owner of Salon Forte</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-body">
+    
+    <div class="card-wrap" id="card" onclick="this.classList.toggle('flipped')"
+     role="button" aria-label="Flip business card">
+  <div class="card-inner">
+    <div class="card-face card-front">
+      <img src="images/SF/SalonBC-43.png" alt="Business card front" style="width:100%;height:100%;object-fit:cover">
+    </div>
+    <div class="card-face card-back">
+      <img src="images/SF/SalonBC-44.png" alt="Business card back" style="width:100%;height:100%;object-fit:cover">
+    </div>
+</div>
+</div>
+    <p class="modal-section-head">Project Outline</p>
+    <p class="modal-text">Salon Forte wanted a brand identity that felt bold, creative, and professional. The client envisioned a visual style inspired by graffiti walls with subtle musical influences. This phase of the project included the logo, color palette, typography, and business card design.</p>
+    <p class="modal-section-head">Process</p>
+    <p class="modal-text">I explored logo concepts, color palettes, and typography simultaneously to create a cohesive identity. The typography was selected to capture the energy of graffiti while maintaining a polished, professional feel appropriate for a salon.</p>
+    <img src="images/SF/proccess-38.png"style="margin-top: 2rem;">
+    <img src="images/SF/proccess-08.png">
+    <p class="modal-text">Early concepts featured a prominent treble clef, but the design relied on multiple colors and felt unnecessarily complex. As the logo evolved, I discovered an opportunity to subtly incorporate the initials "SF" into the mark. This created a cleaner, more versatile logo while preserving the client's musical inspiration.</p>
+    <img src="images/SF/proccess-07.png"style="margin-top: 2rem;">
+    <p class="modal-section-head">Design Direction</p>
+    <p class="modal-text">The final identity balances creativity and professionalism through bold typography, a vibrant color palette, and a simplified logo that works across both print and digital applications.</p>
+    <img src="images/SF/business-card.png" alt="salonforte"style="margin-top: 2rem;">
+    <img src="images/SF/Sf.png">
+  </div>
+</template>
+
+<!-- SCRIPTS -->
+<script>
+
+  // Browsers remember your exact scroll position per page and restore it on
+  // reload by default — independent of the URL's #hash. Turn that off so a
+  // reload always starts at the top, matching the anchor-link fix below.
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+
+  // ── Cursor ──────────────────────────────────────────────────
+  const cursor = document.getElementById('cursor');
+  const usesFinePointer = window.matchMedia('(pointer: fine)').matches;
+
+  if (usesFinePointer) {
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top  = e.clientY + 'px';
+    });
+  }
+
+  // Expands the cursor on every clickable element within `root` — links,
+  // buttons, anything with an onclick, and the book-viewer page dots.
+  // Re-run this after injecting new content (e.g. a modal) so dynamically
+  // added clickable elements get the same behavior.
+  function attachCursorExpand(root) {
+    if (!usesFinePointer) return;
+    root.querySelectorAll('a, button, [onclick], .bk-pip').forEach(el => {
+      if (el.dataset.cursorBound) return;
+      el.dataset.cursorBound = 'true';
+      el.addEventListener('mouseenter', () => cursor.classList.add('expand'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('expand'));
+    });
+  }
+
+  attachCursorExpand(document);
+
+  // ── Anchor links: scroll smoothly without leaving a #hash in the URL ──
+  // (so reloading the page always starts back at the top, not wherever you last clicked)
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    if (link.hasAttribute('onclick')) return; // these already handle their own click (modals, Calendly popups)
+    const targetId = link.getAttribute('href').slice(1);
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      if (targetId === '') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    });
+  });
+
+  // ── Nav scroll ───────────────────────────────────────────────
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ── Hero grid ────────────────────────────────────────────────
+  const heroBg = document.getElementById('heroBg');
+  for (let i = 0; i < 36; i++) heroBg.appendChild(document.createElement('div'));
+
+  // ── Hero scroll-linked typography ────────────────────────────
+  const heroLogo = document.querySelector('.hero-logo');
+  const heroName = document.querySelector('.hero-name');
+  const heroSub  = document.querySelector('.hero-sub');
+  const heroEye  = document.querySelector('.hero-eyebrow');
+
+  let currentScale = 1, currentOpacity = 1, targetScale = 1, targetOpacity = 1;
+  let currentYOffset = 0, targetYOffset = 0, rafId;
+
+  setTimeout(() => {
+    heroLogo.style.animation = 'none';
+    heroName.style.animation  = 'none';
+    heroSub.style.animation   = 'none';
+    heroEye.style.animation   = 'none';
+    heroLogo.style.opacity   = '1';
+    heroName.style.opacity    = '1';
+    heroSub.style.opacity     = '1';
+    heroEye.style.opacity     = '1';
+    heroLogo.style.transform = 'translateY(0)';
+    heroName.style.transform  = 'translateY(0)';
+    heroSub.style.transform   = 'translateY(0)';
+    heroEye.style.transform   = 'translateY(0)';
+  }, 1600);
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  function tickHero() {
+    currentScale   = lerp(currentScale,   targetScale,   0.08);
+    currentOpacity = lerp(currentOpacity, targetOpacity, 0.08);
+    currentYOffset = lerp(currentYOffset, targetYOffset, 0.08);
+    heroLogo.style.transform       = `scale(${currentScale})`;
+    heroLogo.style.transformOrigin = 'center bottom';
+    heroLogo.style.opacity         = currentOpacity;
+    heroName.style.transform       = `scale(${currentScale})`;
+    heroName.style.transformOrigin = 'center bottom';
+    heroName.style.opacity         = currentOpacity;
+    heroSub.style.opacity          = currentOpacity * 0.85;
+    heroEye.style.opacity          = currentOpacity * 0.7;
+    heroEye.style.transform        = `translateY(${-currentYOffset}px)`;
+    if (
+      Math.abs(currentScale   - targetScale)   > 0.001 ||
+      Math.abs(currentOpacity - targetOpacity) > 0.001
+    ) rafId = requestAnimationFrame(tickHero);
+  }
+
+  window.addEventListener('scroll', () => {
+    const hero     = document.querySelector('.hero');
+    const progress = Math.min(window.scrollY / (hero.offsetHeight * 0.6), 1);
+    targetScale   = 1 + (progress * 1.18);
+    targetOpacity = 1 - (progress * 0.75);
+    targetYOffset = progress * 200;
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(tickHero);
+  }, { passive: true });
+
+  // ── Scroll reveal ────────────────────────────────────────────
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── Filter ───────────────────────────────────────────────────
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.project-card').forEach(card => {
+        const cats = card.dataset.cat.split(' ');
+        const show = filter === 'all' || cats.includes(filter);
+        card.classList.toggle('hidden', !show);
+      });
+    });
+  });
+
+  // ── Modal ────────────────────────────────────────────────────
+  function openModal(id) {
+    const tpl = document.getElementById('tpl-' + id);
+    if (!tpl) return;
+    const modalContent = document.getElementById('modalContent');
+    modalContent.innerHTML = tpl.innerHTML;
+    document.getElementById('modalBackdrop').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    attachCursorExpand(modalContent);
+    if (id === 'goldsfield')  requestAnimationFrame(() => setTimeout(initGoldSlideshow, 0));
+    if (id === 'ai')          requestAnimationFrame(() => setTimeout(initBookViewer, 0));
+    if (id === 'salonforte')  requestAnimationFrame(() => setTimeout(initCardHint, 0));
+    if (id === 'salonforte')  requestAnimationFrame(() => setTimeout(initTestimonialToggle, 0));
+  }
+
+  function closeModal(e) {
+    if (e.target === document.getElementById('modalBackdrop')) closeModalDirect();
+  }
+
+  function closeModalDirect() {
+    document.getElementById('modalBackdrop').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+  // ── FAQ accordion ────────────────────────────────────────────
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item').classList.toggle('open');
+    });
+  });
+
+  // ── Testimonial toggle (Salon Forte modal) ────────────────────
+  function initTestimonialToggle() {
+    const modal = document.getElementById('modalContent');
+    const wrap  = modal.querySelector('.testimonial-toggle-wrap');
+    if (!wrap) return;
+    const btn = wrap.querySelector('.testimonial-toggle');
+    btn.addEventListener('click', () => wrap.classList.toggle('open'));
+  }
+
+  // ── Business card hint (runs after modal injects the card into DOM) ──
+  function initCardHint() {
+    const modal   = document.getElementById('modalContent');
+    const cardWrap = modal.querySelector('.card-wrap');
+    if (!cardWrap) return;
+
+    // tilt hint after a short delay
+    const inner = cardWrap.querySelector('.card-inner');
+    setTimeout(( ) => {
+      inner.classList.add('hint');
+      inner.addEventListener('animationend', () => {
+        inner.classList.remove('hint');
+      }, { once: true });
+    }, 500);
+    
+  }
+
+  
+
+  // ── Goldsfield slideshow ─────────────────────────────────────
+  let goldIndex = 0;
+
+  function initGoldSlideshow() {
+    const modal     = document.getElementById('modalContent');
+    const slideshow = modal.querySelector('#goldsfieldSlideshow');
+    if (!slideshow) return;
+    const slides  = slideshow.querySelectorAll('.slide');
+    const nextBtn = slideshow.querySelector('.next');
+    const prevBtn = slideshow.querySelector('.prev');
+    goldIndex = 0;
+    function showSlide(i) {
+      slides.forEach(s => s.classList.remove('active'));
+      slides[i].classList.add('active');
+    }
+    showSlide(goldIndex);
+    nextBtn.onclick = () => { goldIndex = (goldIndex + 1) % slides.length; showSlide(goldIndex); };
+    prevBtn.onclick = () => { goldIndex = (goldIndex - 1 + slides.length) % slides.length; showSlide(goldIndex); };
+  }
+
+  // ── Book viewer ──────────────────────────────────────────────
+  const BOOK_PAGES = [
+    { label: 'Spread 1', left: 'images/Jiayue Yu/page-01.png', right: 'images/Jiayue Yu/page-02.png' },
+    { label: 'Spread 2', left: 'images/Jiayue Yu/page-03.png', right: 'images/Jiayue Yu/page-04.png' },
+    { label: 'Spread 3', left: 'images/Jiayue Yu/page-05.png', right: 'images/Jiayue Yu/page-06.png' },
+  ];
+
+  function initBookViewer() {
+    const modal   = document.getElementById('modalContent');
+    const pgLeft  = modal.querySelector('#bkPgLeft');
+    const pgRight = modal.querySelector('#bkPgRight');
+    const flipL   = modal.querySelector('#bkFlipL');
+    const flipR   = modal.querySelector('#bkFlipR');
+    const prevBtn = modal.querySelector('#bkPrev');
+    const nextBtn = modal.querySelector('#bkNext');
+    const pipsEl  = modal.querySelector('#bkPips');
+    const lbl     = modal.querySelector('#bkLbl');
+    const N       = BOOK_PAGES.length;
+    let cur = 0, busy = false;
+
+    BOOK_PAGES.forEach((_, i) => {
+      const p = document.createElement('div');
+      p.className = 'bk-pip' + (i === 0 ? ' on' : '');
+      p.setAttribute('aria-label', 'Go to spread ' + (i + 1));
+      p.onclick = () => go(i);
+      pipsEl.appendChild(p);
+    });
+    attachCursorExpand(pipsEl);
+
+    function makeImg(src) {
+      const img = document.createElement('img');
+      img.className = 'bk-pg-img';
+      img.src = src;
+      img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block';
+      return img;
+    }
+
+    function setHalf(el, src) {
+      el.innerHTML = '';
+      el.appendChild(src ? makeImg(src) : Object.assign(document.createElement('div'), { className: 'bk-ph' }));
+    }
+
+    function setFlip(panel, frontSrc, backSrc) {
+      const front = panel.querySelector('.bk-fp-front');
+      const back  = panel.querySelector('.bk-fp-back');
+      front.innerHTML = ''; back.innerHTML = '';
+      front.appendChild(frontSrc ? makeImg(frontSrc) : document.createElement('div'));
+      back.appendChild(backSrc   ? makeImg(backSrc)  : document.createElement('div'));
+    }
+
+    function showSpread(idx) {
+      const pg = BOOK_PAGES[idx];
+      setHalf(pgLeft, pg.left); setHalf(pgRight, pg.right);
+      flipL.style.cssText = 'display:none';
+      flipR.style.cssText = 'display:none';
+    }
+
+    function animateFlip(fromIdx, toIdx, done) {
+      const fwd = toIdx > fromIdx;
+      const fromPg = BOOK_PAGES[fromIdx], toPg = BOOK_PAGES[toIdx];
+      const panel  = fwd ? flipR : flipL;
+      if (fwd) { setFlip(panel, fromPg.right, toPg.left); setHalf(pgRight, toPg.right); }
+      else      { setFlip(panel, fromPg.left,  toPg.right); setHalf(pgLeft,  toPg.left); }
+      panel.style.display = 'block';
+      panel.style.transition = 'none';
+      panel.style.transform = 'rotateY(0deg)';
+      void panel.offsetWidth;
+      panel.style.transition = 'transform 0.55s cubic-bezier(0.4,0,0.2,1)';
+      panel.style.transform  = fwd ? 'rotateY(-180deg)' : 'rotateY(180deg)';
+      panel.addEventListener('transitionend', () => {
+        if (fwd) setHalf(pgLeft, toPg.left); else setHalf(pgRight, toPg.right);
+        panel.style.display = panel.style.transform = panel.style.transition = '';
+        done();
+      }, { once: true });
+    }
+
+    function ui() {
+      prevBtn.disabled = cur === 0;
+      nextBtn.disabled = cur === N - 1;
+      lbl.textContent  = BOOK_PAGES[cur].label;
+      pipsEl.querySelectorAll('.bk-pip').forEach((p, i) => p.classList.toggle('on', i === cur));
+    }
+
+    function go(idx) {
+      if (busy || idx === cur || idx < 0 || idx >= N) return;
+      busy = true;
+      const from = cur, to = idx;
+      animateFlip(from, to, () => { cur = to; busy = false; ui(); });
+    }
+
+    prevBtn.onclick = () => go(cur - 1);
+    nextBtn.onclick = () => go(cur + 1);
+    showSpread(0);
+    ui();
+  }
+
+</script>
+
+<!-- Calendly widget script (powers the popup used by the Book a Call / CTA buttons) -->
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</body>
+</html>
