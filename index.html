@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta name="description" content="Sriya Vempati — UX Designer">
-<meta property="og:title" content="StudioVem — Sriya Vempati Design Portfolio">
+<meta property="og:title" content="StudioVem - Branding & User experiences">
 <meta property="og:description" content="UX Designer crafting experiences at the intersection of culture, craft, and clarity.">
 <meta property="og:image" content="images/logo.png">
 <meta charset="UTF-8">
@@ -50,11 +50,34 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-bg" id="heroBg"></div>
-  <img src="images/logo.png" alt="StudioVem logo" class="hero-logo">
-  <!-- Hidden for now — remove style="display:none" to bring this back -->
-  <p class="hero-eyebrow" style="display:none;">Design Portfolio · 2026</p>
-  <h1 class="hero-name">Sriya <em>Vempati</em></h1>
+
+  <img src="images/logo.png" alt="StudioVem logo" class="hero-logo-corner" id="heroLogoCorner">
+
+  <div class="hero-carousel-wrap">
+    <div class="hero-carousel-track" id="heroCarouselTrack">
+      <img class="hero-carousel-img" src="images/SF/business-card.png" alt="Salon Forte" onclick="heroCarouselGoTo('salonforte')">
+      <img class="hero-carousel-img" src="images/VIBE/logo copy.jpg" alt="VIBE Lab" onclick="heroCarouselGoTo('vibe')">
+      <img class="hero-carousel-img" src="images/gold/TITLE SLIDE.png" alt="Goldsfield Ghost Town" onclick="heroCarouselGoTo('goldsfield')">
+      <img class="hero-carousel-img" src="images/bottleriotcover.png" alt="Bottle Riot" onclick="heroCarouselGoTo('bottleriot')">
+      <img class="hero-carousel-img" src="images/tuicover.png" alt="The Urban Indian" onclick="heroCarouselGoTo('urbanindian')">
+      <img class="hero-carousel-img" src="images/work poster.png" alt="Work — Risograph" onclick="heroCarouselGoTo('work')">
+      <img class="hero-carousel-img" src="images/Jiayue Yu/jiyayu mockup1.png" alt="Jiayue Yu" onclick="heroCarouselGoTo('ai')">
+      <!-- duplicate set so the marquee loop is seamless -->
+      <img class="hero-carousel-img" src="images/SF/business-card.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('salonforte')">
+      <img class="hero-carousel-img" src="images/VIBE/logo copy.jpg" alt="" aria-hidden="true" onclick="heroCarouselGoTo('vibe')">
+      <img class="hero-carousel-img" src="images/gold/TITLE SLIDE.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('goldsfield')">
+      <img class="hero-carousel-img" src="images/bottleriotcover.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('bottleriot')">
+      <img class="hero-carousel-img" src="images/tuicover.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('urbanindian')">
+      <img class="hero-carousel-img" src="images/work poster.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('work')">
+      <img class="hero-carousel-img" src="images/Jiayue Yu/jiyayu mockup1.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('ai')">
+    </div>
+  </div>
+
   <p class="hero-sub">Branding and UX Designer helping <em>founders and businesses</em> build brands people trust.</p>
+  <!-- Kept in the DOM (hidden) since the scroll script still references it -->
+  <p class="hero-eyebrow" style="display:none;">Design Portfolio · 2026</p>
+  <p class="hero-name"><span class="brand-dark">Studio</span><span class="brand-accent">Vem</span></p>
+
   <div class="hero-scroll">
     <span>Scroll</span>
     <div class="line"></div>
@@ -431,7 +454,7 @@
         <span>Who owns the final files?</span>
         <span class="faq-icon">+</span>
       </button>
-      <div class="faq-a-wrap"><div class="faq-a-inner"><p class="faq-a">Once the project is complete and paid in full, all final deliverables belong to you.</p></div></div>
+      <div class="faq-a-wrap"><div class="faq-a-inner"><p class="faq-a">Once the project is complete and paid in full, all final deliverables belong to you. StudioVem reserves the right to use deliverables for promotional purposes only.</p></div></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" type="button">
@@ -785,19 +808,12 @@ The layout is split between text and imagery, allowing her work to remain centra
     <p class="modal-eyebrow">Brand Identity · 2026</p>
     <h2 class="modal-title">Salon Forte</h2>
     <p class="modal-worktype">Client Work</p>
-    <div class="testimonial-toggle-wrap">
-      <button class="testimonial-toggle" type="button">
-        <span>Testimonial</span>
-        <span class="testimonial-arrow">→</span>
-      </button>
-      <div class="testimonial-a-wrap">
-        <div class="testimonial-a-inner">
-          <p class="testimonial-quote">StudioVem absolutely crushed it with my logo design! I was all over the place during our initial sit down on what direction I wanted for my logo. What was nice was that on our 2nd visit Sriya already had different sketches on how all the different elements could work together. That helped me out because it made it easier to narrow down the final design.</p>
-          <p class="testimonial-quote">Sriya was also very easy to work with. She kept an open mind to any critique I had. If I had an idea that didn't quite work, she explained in detail as to why going a different direction was better. As a client, that really instilled trust in her and made me feel confident that I would be satisfied with the final design.</p>
-          <p class="testimonial-quote">Overall, I am so pleased with the final product. I can't stop bragging about it. I would highly recommend StudioVem to anyone who needs help with any type of graphic designing.</p>
-          <cite class="testimonial-cite">— Julia Ayasha, Owner of Salon Forte</cite>
-        </div>
-      </div>
+    <div class="testimonial-block">
+      <p class="testimonial-label">Testimonial</p>
+      <p class="testimonial-quote">StudioVem absolutely crushed it with my logo design! I was all over the place during our initial sit down on what direction I wanted for my logo. What was nice was that on our 2nd visit Sriya already had different sketches on how all the different elements could work together. That helped me out because it made it easier to narrow down the final design.</p>
+      <p class="testimonial-quote">Sriya was also very easy to work with. She kept an open mind to any critique I had. If I had an idea that didn't quite work, she explained in detail as to why going a different direction was better. As a client, that really instilled trust in her and made me feel confident that I would be satisfied with the final design.</p>
+      <p class="testimonial-quote">Overall, I am so pleased with the final product. I can't stop bragging about it. I would highly recommend StudioVem to anyone who needs help with any type of graphic designing.</p>
+      <cite class="testimonial-cite">— Julia Ayasha, Owner of Salon Forte</cite>
     </div>
   </div>
   <div class="modal-body">
@@ -895,7 +911,7 @@ The layout is split between text and imagery, allowing her work to remain centra
   for (let i = 0; i < 36; i++) heroBg.appendChild(document.createElement('div'));
 
   // ── Hero scroll-linked typography ────────────────────────────
-  const heroLogo = document.querySelector('.hero-logo');
+  const heroLogoCorner = document.querySelector('.hero-logo-corner');
   const heroName = document.querySelector('.hero-name');
   const heroSub  = document.querySelector('.hero-sub');
   const heroEye  = document.querySelector('.hero-eyebrow');
@@ -903,16 +919,22 @@ The layout is split between text and imagery, allowing her work to remain centra
   let currentScale = 1, currentOpacity = 1, targetScale = 1, targetOpacity = 1;
   let currentYOffset = 0, targetYOffset = 0, rafId;
 
+  // Logo: scales down and slides up into the nav bar as you scroll.
+  let currentLogoScale = 1, targetLogoScale = 1;
+  let currentLogoY = 0, targetLogoY = 0;
+  const LOGO_DOCKED_SCALE = 0.3;   // final size relative to its big hero size
+  const LOGO_DOCKED_Y     = -35;   // px it travels upward to sit in the nav bar
+
   setTimeout(() => {
-    heroLogo.style.animation = 'none';
+    heroLogoCorner.style.animation = 'none';
     heroName.style.animation  = 'none';
     heroSub.style.animation   = 'none';
     heroEye.style.animation   = 'none';
-    heroLogo.style.opacity   = '1';
+    heroLogoCorner.style.opacity = '1';
     heroName.style.opacity    = '1';
     heroSub.style.opacity     = '1';
     heroEye.style.opacity     = '1';
-    heroLogo.style.transform = 'translateY(0)';
+    heroLogoCorner.style.transform = 'translateY(0) scale(1)';
     heroName.style.transform  = 'translateY(0)';
     heroSub.style.transform   = 'translateY(0)';
     heroEye.style.transform   = 'translateY(0)';
@@ -921,33 +943,47 @@ The layout is split between text and imagery, allowing her work to remain centra
   function lerp(a, b, t) { return a + (b - a) * t; }
 
   function tickHero() {
-    currentScale   = lerp(currentScale,   targetScale,   0.08);
-    currentOpacity = lerp(currentOpacity, targetOpacity, 0.08);
-    currentYOffset = lerp(currentYOffset, targetYOffset, 0.08);
-    heroLogo.style.transform       = `scale(${currentScale})`;
-    heroLogo.style.transformOrigin = 'center bottom';
-    heroLogo.style.opacity         = currentOpacity;
-    heroName.style.transform       = `scale(${currentScale})`;
-    heroName.style.transformOrigin = 'center bottom';
-    heroName.style.opacity         = currentOpacity;
+    currentScale     = lerp(currentScale,     targetScale,     0.08);
+    currentOpacity   = lerp(currentOpacity,   targetOpacity,   0.08);
+    currentYOffset   = lerp(currentYOffset,   targetYOffset,   0.08);
+    currentLogoScale = lerp(currentLogoScale, targetLogoScale, 0.08);
+    currentLogoY     = lerp(currentLogoY,     targetLogoY,     0.08);
+
+    heroLogoCorner.style.transform = `translateY(${currentLogoY}px) scale(${currentLogoScale})`;
+
+    //heroName.style.transform       = `scale(${currentScale})`;
+    //heroName.style.transformOrigin = 'center bottom';
+    //heroName.style.opacity         = currentOpacity;
     heroSub.style.opacity          = currentOpacity * 0.85;
     heroEye.style.opacity          = currentOpacity * 0.7;
     heroEye.style.transform        = `translateY(${-currentYOffset}px)`;
     if (
-      Math.abs(currentScale   - targetScale)   > 0.001 ||
-      Math.abs(currentOpacity - targetOpacity) > 0.001
+      Math.abs(currentScale     - targetScale)     > 0.001 ||
+      Math.abs(currentOpacity   - targetOpacity)   > 0.001 ||
+      Math.abs(currentLogoScale - targetLogoScale) > 0.001 ||
+      Math.abs(currentLogoY     - targetLogoY)     > 0.001
     ) rafId = requestAnimationFrame(tickHero);
   }
 
   window.addEventListener('scroll', () => {
     const hero     = document.querySelector('.hero');
     const progress = Math.min(window.scrollY / (hero.offsetHeight * 0.6), 1);
-    targetScale   = 1 + (progress * 1.18);
-    targetOpacity = 1 - (progress * 0.75);
-    targetYOffset = progress * 200;
+    targetScale     = 1 + (progress * 1.18);
+    targetOpacity   = 1 - (progress * 0.75);
+    targetYOffset   = progress * 200;
+    targetLogoScale = 1 - (progress * (1 - LOGO_DOCKED_SCALE));
+    targetLogoY     = progress * LOGO_DOCKED_Y;
     cancelAnimationFrame(rafId);
     rafId = requestAnimationFrame(tickHero);
   }, { passive: true });
+
+  // ── Hero carousel: click a project to jump to Featured Work and open it ──
+  function heroCarouselGoTo(projectId) {
+    const target = document.getElementById('work');
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+    setTimeout(() => openModal(projectId), 650);
+  }
 
   // ── Scroll reveal ────────────────────────────────────────────
   const observer = new IntersectionObserver((entries) => {
@@ -986,7 +1022,6 @@ The layout is split between text and imagery, allowing her work to remain centra
     if (id === 'goldsfield')  requestAnimationFrame(() => setTimeout(initGoldSlideshow, 0));
     if (id === 'ai')          requestAnimationFrame(() => setTimeout(initBookViewer, 0));
     if (id === 'salonforte')  requestAnimationFrame(() => setTimeout(initCardHint, 0));
-    if (id === 'salonforte')  requestAnimationFrame(() => setTimeout(initTestimonialToggle, 0));
   }
 
   function closeModal(e) {
@@ -1006,15 +1041,6 @@ The layout is split between text and imagery, allowing her work to remain centra
       btn.closest('.faq-item').classList.toggle('open');
     });
   });
-
-  // ── Testimonial toggle (Salon Forte modal) ────────────────────
-  function initTestimonialToggle() {
-    const modal = document.getElementById('modalContent');
-    const wrap  = modal.querySelector('.testimonial-toggle-wrap');
-    if (!wrap) return;
-    const btn = wrap.querySelector('.testimonial-toggle');
-    btn.addEventListener('click', () => wrap.classList.toggle('open'));
-  }
 
   // ── Business card hint (runs after modal injects the card into DOM) ──
   function initCardHint() {
