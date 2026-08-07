@@ -171,6 +171,114 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
 .nav-links a:hover::after { width: 100%; }
 
 
+/* ── MOBILE HAMBURGER ────────────────────────────────────── */
+
+.nav-hamburger {
+  display:         none;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     center;
+  gap:             5px;
+  width:           38px;
+  height:          38px;
+  background:      transparent;
+  border:          none;
+  cursor:          none;
+  padding:         0;
+}
+
+.nav-hamburger span {
+  display:    block;
+  width:      22px;
+  height:     1px;
+  background: var(--ink);
+  transition: transform 0.25s var(--trans), opacity 0.2s;
+}
+
+
+/* ── MOBILE NAV MENU (opens like a project modal) ───────── */
+
+.nav-menu-backdrop {
+  position:        fixed;
+  inset:           0;
+  background:      rgba(20, 20, 26, 0.85);
+  z-index:         210;
+  opacity:         0;
+  pointer-events:  none;
+  transition:      opacity 0.4s var(--trans);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  padding:         2rem;
+}
+
+.nav-menu-backdrop.open {
+  opacity:        1;
+  pointer-events: all;
+}
+
+.nav-menu-box {
+  position:  relative;
+  background: var(--bg);
+  width:      100%;
+  max-width:  420px;
+  padding:    3.5rem 2rem 2.5rem;
+  transform:  translateY(30px);
+  transition: transform 0.5s var(--trans);
+}
+
+.nav-menu-backdrop.open .nav-menu-box { transform: translateY(0); }
+
+.nav-menu-close {
+  position:        absolute;
+  top:             1.1rem;
+  right:           1.1rem;
+  width:           34px;
+  height:          34px;
+  background:      var(--bg2);
+  border:          none;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  font-size:       1.1rem;
+  color:           var(--ink);
+  cursor:          none;
+  transition:      background 0.2s;
+}
+
+.nav-menu-close:hover {
+  background: var(--ink);
+  color:      var(--bg);
+}
+
+.nav-menu-list {
+  list-style: none;
+  display:    flex;
+  flex-direction: column;
+}
+
+.nav-menu-list li {
+  border-bottom: 1px solid var(--line);
+  text-align:    center;
+}
+
+.nav-menu-list li:first-child { border-top: 1px solid var(--line); }
+
+.nav-menu-list a {
+  display:         block;
+  padding:         1.15rem 0;
+  font-family:     var(--serif);
+  font-size:       1.4rem;
+  font-weight:     300;
+  font-style:      italic;
+  color:           var(--ink);
+  text-decoration: none;
+  transition:      color 0.2s;
+}
+
+.nav-menu-list a:hover { color: var(--accent); }
+
+
 /* ── HERO ───────────────────────────────────────────────── */
 
 .hero {
@@ -202,7 +310,23 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
 }
 
 @media (max-width: 640px) {
+<<<<<<< HEAD
+  /* Centered above the carousel, sitting in the gap between the top of
+     the hero and the nav bar. Horizontal centering uses left:50% + a
+     negative margin (half the logo width) instead of a transform, so it
+     doesn't fight with the translateY/scale transform the scroll script
+     applies inline. Adjust WIDTH below (and the matching margin-left) if
+     you resize the logo. */
+  .hero-logo-corner {
+    width:            78px;   /* ← logo size on mobile */
+    top:              1.1rem; /* ← vertical start position, in the gap above the carousel */
+    left:             50%;
+    margin-left:      -39px;  /* ← always half of the width above */
+    transform-origin: top center;
+  }
+=======
   .hero-logo-corner { width: 70px; top: 1.6rem; left: 1.5rem; }
+>>>>>>> c128d93b1f57b4075fecb7303d4f82cdc031d79f
 }
 
 /* Extra top margin here clears the fixed, big-format logo in the hero
@@ -233,6 +357,12 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
   to { transform: translateX(-50%); }
 }
 
+<<<<<<< HEAD
+/* Second brick row — only used on mobile (see media query below) */
+.hero-carousel-track-2 { display: none; }
+
+=======
+>>>>>>> c128d93b1f57b4075fecb7303d4f82cdc031d79f
 .hero-carousel-img {
   height:       260px;
   width:        auto;
@@ -249,7 +379,36 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
 }
 
 @media (max-width: 640px) {
+<<<<<<< HEAD
+  /* Two staggered ("brick") rows instead of one, each tile 50% bigger,
+     the whole block vertically centered in the space above the name.
+     Tune ROW GAP / IMG HEIGHT / row-2 offset together — the offset should
+     stay at roughly half a tile's on-screen width for the brick look. */
+  .hero-carousel-wrap {
+    display:        flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:    center;
+    gap:             0.6rem;   /* ← space between the two rows */
+    margin:          7.4rem auto 2rem;
+    max-width:       100%;
+  }
+
+  .hero-carousel-track { animation-duration: 42s; }
+
+  .hero-carousel-track-2 {
+    display:           flex;
+    margin-left:       -69px; /* ← brick offset: ~half a tile's width */
+    animation-duration: 42s;
+    animation-direction: reverse;
+  }
+
+  .hero-carousel-img {
+    height: 138px; /* ← 260px desktop card scaled to mobile, then +50% */
+  }
+=======
   .hero-carousel-img { height: 92px; }
+>>>>>>> c128d93b1f57b4075fecb7303d4f82cdc031d79f
 }
 
 .hero-bg {
@@ -315,6 +474,20 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
   opacity:     0;
   transform:   translateY(20px);
   animation:   fadeup 0.8s var(--trans) 0.8s forwards;
+}
+
+@media (max-width: 640px) {
+  /* "StudioVem" bigger + pushed down a bit, blurb pushed down a bit too.
+     These two rules are the settings to adjust: bump font-size / margin-top
+     on .hero-name, and margin-top on .hero-sub. */
+  .hero-name {
+    font-size:  clamp(2.3rem, 9vw, 3rem); /* ← bigger on mobile */
+    margin-top: 1.8rem;                    /* ← lower on mobile */
+  }
+
+  .hero-sub {
+    margin-top: 1.9rem; /* ← lower on mobile */
+  }
 }
 
 .hero-scroll {
@@ -1788,4 +1961,18 @@ footer a:hover { color: var(--accent); }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color:          var(--accent);
+}
+
+
+/* ── MOBILE NAV: hide the full link list + CTA, show hamburger ── */
+
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
 }

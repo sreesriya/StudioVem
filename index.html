@@ -44,8 +44,25 @@
        onclick="if (window.Calendly) { Calendly.initPopupWidget({url: 'https://calendly.com/sreesriya-vempati/30min'}); return false; }">
       Book a Call
     </a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" onclick="openNavMenu()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE NAV MENU -->
+<div class="nav-menu-backdrop" id="navMenuBackdrop" onclick="closeNavMenuBg(event)">
+  <div class="nav-menu-box">
+    <button class="nav-menu-close" onclick="closeNavMenu()">✕</button>
+    <ul class="nav-menu-list">
+      <li><a href="#work" onclick="closeNavMenu()">Work</a></li>
+      <li><a href="#services" onclick="closeNavMenu()">Services</a></li>
+      <li><a href="#process" onclick="closeNavMenu()">Process</a></li>
+      <li><a href="#about" onclick="closeNavMenu()">About</a></li>
+      <li><a href="#contact" onclick="closeNavMenu()">Contact</a></li>
+    </ul>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="top">
@@ -71,6 +88,27 @@
       <img class="hero-carousel-img" src="images/work poster.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('work')">
       <img class="hero-carousel-img" src="images/Jiayue Yu/jiyayu mockup1.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('ai')">
     </div>
+<<<<<<< HEAD
+    <!-- Second row: mobile-only "brick" row, offset and reversed. Hidden on desktop. -->
+    <div class="hero-carousel-track hero-carousel-track-2" id="heroCarouselTrack2">
+      <img class="hero-carousel-img" src="images/VIBE/logo copy.jpg" alt="" aria-hidden="true" onclick="heroCarouselGoTo('vibe')">
+      <img class="hero-carousel-img" src="images/bottleriotcover.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('bottleriot')">
+      <img class="hero-carousel-img" src="images/work poster.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('work')">
+      <img class="hero-carousel-img" src="images/SF/business-card.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('salonforte')">
+      <img class="hero-carousel-img" src="images/tuicover.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('urbanindian')">
+      <img class="hero-carousel-img" src="images/Jiayue Yu/jiyayu mockup1.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('ai')">
+      <img class="hero-carousel-img" src="images/gold/TITLE SLIDE.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('goldsfield')">
+      <!-- duplicate set for the seamless loop -->
+      <img class="hero-carousel-img" src="images/VIBE/logo copy.jpg" alt="" aria-hidden="true" onclick="heroCarouselGoTo('vibe')">
+      <img class="hero-carousel-img" src="images/bottleriotcover.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('bottleriot')">
+      <img class="hero-carousel-img" src="images/work poster.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('work')">
+      <img class="hero-carousel-img" src="images/SF/business-card.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('salonforte')">
+      <img class="hero-carousel-img" src="images/tuicover.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('urbanindian')">
+      <img class="hero-carousel-img" src="images/Jiayue Yu/jiyayu mockup1.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('ai')">
+      <img class="hero-carousel-img" src="images/gold/TITLE SLIDE.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('goldsfield')">
+    </div>
+=======
+>>>>>>> c128d93b1f57b4075fecb7303d4f82cdc031d79f
   </div>
 
   <p class="hero-sub">Branding and UX Designer helping <em>founders and businesses</em> build brands people trust.</p>
@@ -906,6 +944,19 @@ The layout is split between text and imagery, allowing her work to remain centra
     navbar.classList.toggle('scrolled', window.scrollY > 60);
   });
 
+  // ── Mobile nav menu ──────────────────────────────────────────
+  function openNavMenu() {
+    document.getElementById('navMenuBackdrop').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNavMenu() {
+    document.getElementById('navMenuBackdrop').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeNavMenuBg(e) {
+    if (e.target === document.getElementById('navMenuBackdrop')) closeNavMenu();
+  }
+
   // ── Hero grid ────────────────────────────────────────────────
   const heroBg = document.getElementById('heroBg');
   for (let i = 0; i < 36; i++) heroBg.appendChild(document.createElement('div'));
@@ -922,8 +973,23 @@ The layout is split between text and imagery, allowing her work to remain centra
   // Logo: scales down and slides up into the nav bar as you scroll.
   let currentLogoScale = 1, targetLogoScale = 1;
   let currentLogoY = 0, targetLogoY = 0;
+<<<<<<< HEAD
+
+  // Desktop vs. mobile use different docked scales/offsets because the
+  // logo's starting size/position and the nav bar's height differ.
+  // Edit MOBILE_* below to fine-tune how the logo lands next to the
+  // "StudioVem — Sriya Vempati" nav text on small screens.
+  const isMobileLogo = () => window.matchMedia('(max-width: 640px)').matches;
+  const LOGO_DOCKED_SCALE         = 0.3;    // desktop final size relative to hero size
+  const LOGO_DOCKED_Y             = -35;    // desktop px traveled upward into the nav bar
+  const MOBILE_LOGO_DOCKED_SCALE  = 0.34;   // mobile final size relative to hero size
+  const MOBILE_LOGO_DOCKED_Y      = -49;    // mobile px traveled upward — tune this so the
+                                             // logo's vertical center lines up with the
+                                             // nav-logo text baseline in the top bar
+=======
   const LOGO_DOCKED_SCALE = 0.3;   // final size relative to its big hero size
   const LOGO_DOCKED_Y     = -35;   // px it travels upward to sit in the nav bar
+>>>>>>> c128d93b1f57b4075fecb7303d4f82cdc031d79f
 
   setTimeout(() => {
     heroLogoCorner.style.animation = 'none';
@@ -949,6 +1015,11 @@ The layout is split between text and imagery, allowing her work to remain centra
     currentLogoScale = lerp(currentLogoScale, targetLogoScale, 0.08);
     currentLogoY     = lerp(currentLogoY,     targetLogoY,     0.08);
 
+<<<<<<< HEAD
+    // On mobile the logo is centered with `left:50%` + a negative margin
+    // (see CSS), so translateX must stay 0 here — only Y + scale animate.
+=======
+>>>>>>> c128d93b1f57b4075fecb7303d4f82cdc031d79f
     heroLogoCorner.style.transform = `translateY(${currentLogoY}px) scale(${currentLogoScale})`;
 
     //heroName.style.transform       = `scale(${currentScale})`;
@@ -968,11 +1039,21 @@ The layout is split between text and imagery, allowing her work to remain centra
   window.addEventListener('scroll', () => {
     const hero     = document.querySelector('.hero');
     const progress = Math.min(window.scrollY / (hero.offsetHeight * 0.6), 1);
+<<<<<<< HEAD
+    const dockedScale = isMobileLogo() ? MOBILE_LOGO_DOCKED_SCALE : LOGO_DOCKED_SCALE;
+    const dockedY      = isMobileLogo() ? MOBILE_LOGO_DOCKED_Y     : LOGO_DOCKED_Y;
+    targetScale     = 1 + (progress * 1.18);
+    targetOpacity   = 1 - (progress * 0.75);
+    targetYOffset   = progress * 200;
+    targetLogoScale = 1 - (progress * (1 - dockedScale));
+    targetLogoY     = progress * dockedY;
+=======
     targetScale     = 1 + (progress * 1.18);
     targetOpacity   = 1 - (progress * 0.75);
     targetYOffset   = progress * 200;
     targetLogoScale = 1 - (progress * (1 - LOGO_DOCKED_SCALE));
     targetLogoY     = progress * LOGO_DOCKED_Y;
+>>>>>>> c128d93b1f57b4075fecb7303d4f82cdc031d79f
     cancelAnimationFrame(rafId);
     rafId = requestAnimationFrame(tickHero);
   }, { passive: true });
@@ -1033,7 +1114,12 @@ The layout is split between text and imagery, allowing her work to remain centra
     document.body.style.overflow = '';
   }
 
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeModalDirect();
+      closeNavMenu();
+    }
+  });
 
   // ── FAQ accordion ────────────────────────────────────────────
   document.querySelectorAll('.faq-q').forEach(btn => {
