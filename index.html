@@ -44,8 +44,25 @@
        onclick="if (window.Calendly) { Calendly.initPopupWidget({url: 'https://calendly.com/sreesriya-vempati/30min'}); return false; }">
       Book a Call
     </a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU MODAL -->
+<div class="menu-backdrop" id="menuBackdrop" onclick="closeMenu(event)">
+  <div class="menu-box" id="menuBox">
+    <button class="menu-close" onclick="closeMenuDirect()">✕</button>
+    <ul class="menu-list">
+      <li><a href="#work" onclick="closeMenuDirect()">Work</a></li>
+      <li><a href="#services" onclick="closeMenuDirect()">Services</a></li>
+      <li><a href="#process" onclick="closeMenuDirect()">Process</a></li>
+      <li><a href="#about" onclick="closeMenuDirect()">About</a></li>
+      <li><a href="#contact" onclick="closeMenuDirect()">Contact</a></li>
+    </ul>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="top">
@@ -906,6 +923,25 @@ The layout is split between text and imagery, allowing her work to remain centra
     navbar.classList.toggle('scrolled', window.scrollY > 60);
   });
 
+  // ── Mobile hamburger menu ───────────────────────────────────
+  const navHamburger = document.getElementById('navHamburger');
+  const menuBackdrop  = document.getElementById('menuBackdrop');
+  navHamburger.addEventListener('click', () => {
+    menuBackdrop.classList.add('open');
+    navHamburger.classList.add('active');
+    navHamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  });
+  function closeMenu(e) {
+    if (e.target === menuBackdrop) closeMenuDirect();
+  }
+  function closeMenuDirect() {
+    menuBackdrop.classList.remove('open');
+    navHamburger.classList.remove('active');
+    navHamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
   // ── Hero grid ────────────────────────────────────────────────
   const heroBg = document.getElementById('heroBg');
   for (let i = 0; i < 36; i++) heroBg.appendChild(document.createElement('div'));
@@ -922,8 +958,18 @@ The layout is split between text and imagery, allowing her work to remain centra
   // Logo: scales down and slides up into the nav bar as you scroll.
   let currentLogoScale = 1, targetLogoScale = 1;
   let currentLogoY = 0, targetLogoY = 0;
-  const LOGO_DOCKED_SCALE = 0.3;   // final size relative to its big hero size
-  const LOGO_DOCKED_Y     = -35;   // px it travels upward to sit in the nav bar
+  const LOGO_DOCKED_SCALE = 0.3;   // final size relative to its big hero size (desktop)
+  const LOGO_DOCKED_Y     = -35;   // px it travels upward to sit in the nav bar (desktop)
+
+  // Mobile uses its own docked scale/offset since the logo starts smaller
+  // and centered, and the mobile nav bar is a different height.
+  // ADJUST HERE if the docked logo doesn't line up with the
+  // "StudioVem — Sriya Vempati" text in the mobile nav bar:
+  // - LOGO_DOCKED_SCALE_MOBILE: how small it ends up
+  // - LOGO_DOCKED_Y_MOBILE: how far up it travels (more negative = further up)
+  const LOGO_DOCKED_SCALE_MOBILE = 0.5;
+  const LOGO_DOCKED_Y_MOBILE     = -49;
+  const isMobileLayout = () => window.matchMedia('(max-width: 640px)').matches;
 
   setTimeout(() => {
     heroLogoCorner.style.animation = 'none';
@@ -968,11 +1014,13 @@ The layout is split between text and imagery, allowing her work to remain centra
   window.addEventListener('scroll', () => {
     const hero     = document.querySelector('.hero');
     const progress = Math.min(window.scrollY / (hero.offsetHeight * 0.6), 1);
+    const dockedScale = isMobileLayout() ? LOGO_DOCKED_SCALE_MOBILE : LOGO_DOCKED_SCALE;
+    const dockedY      = isMobileLayout() ? LOGO_DOCKED_Y_MOBILE     : LOGO_DOCKED_Y;
     targetScale     = 1 + (progress * 1.18);
     targetOpacity   = 1 - (progress * 0.75);
     targetYOffset   = progress * 200;
-    targetLogoScale = 1 - (progress * (1 - LOGO_DOCKED_SCALE));
-    targetLogoY     = progress * LOGO_DOCKED_Y;
+    targetLogoScale = 1 - (progress * (1 - dockedScale));
+    targetLogoY     = progress * dockedY;
     cancelAnimationFrame(rafId);
     rafId = requestAnimationFrame(tickHero);
   }, { passive: true });
@@ -1033,7 +1081,7 @@ The layout is split between text and imagery, allowing her work to remain centra
     document.body.style.overflow = '';
   }
 
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModalDirect(); closeMenuDirect(); } });
 
   // ── FAQ accordion ────────────────────────────────────────────
   document.querySelectorAll('.faq-q').forEach(btn => {

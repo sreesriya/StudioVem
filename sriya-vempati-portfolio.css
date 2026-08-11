@@ -106,10 +106,6 @@ nav.scrolled {
 
 nav.scrolled .nav-logo { margin-left: 2.75rem; }
 
-@media (max-width: 640px) {
-  .nav-logo { font-size: 0.8rem; }
-}
-
 .nav-links {
   display:    flex;
   gap:        2.5rem;
@@ -171,6 +167,132 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
 .nav-links a:hover::after { width: 100%; }
 
 
+/* ── NAV: HAMBURGER (mobile) ────────────────────────────── */
+
+.nav-hamburger {
+  display:        none;
+  flex-direction: column;
+  justify-content: center;
+  align-items:    center;
+  gap:            5px;
+  width:          40px;
+  height:         40px;
+  background:     transparent;
+  border:         none;
+  cursor:         none;
+  flex-shrink:    0;
+}
+
+.nav-hamburger span {
+  display:    block;
+  width:      22px;
+  height:     1px;
+  background: var(--ink);
+  transition: transform 0.3s var(--trans), opacity 0.3s var(--trans);
+}
+
+.nav-hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-hamburger.active span:nth-child(2) { opacity: 0; }
+.nav-hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* This block is placed after every base .nav-links / .nav-cta / .nav-hamburger
+   rule above on purpose — CSS gives the later rule priority when specificity
+   is equal, so putting mobile overrides earlier in the file gets silently
+   overridden by the base rules further down. Keep this block last. */
+@media (max-width: 640px) {
+  /* Mobile top bar: logo + wordmark + hamburger only.
+     Work/Services/Process/About/Contact links and the "Book a Call"
+     button move into the hamburger menu instead. */
+  nav { padding: 1rem 1.25rem; }
+  .nav-logo { font-size: 0.72rem; }
+  .nav-links,
+  .nav-cta { display: none !important; }
+  .nav-hamburger { display: flex !important; }
+}
+
+
+/* ── MOBILE MENU MODAL ───────────────────────────────────── */
+
+.menu-backdrop {
+  position:        fixed;
+  inset:           0;
+  background:      rgba(20, 20, 26, 0.85);
+  z-index:         300;
+  opacity:         0;
+  pointer-events:  none;
+  transition:      opacity 0.4s var(--trans);
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  padding:         2rem;
+}
+
+.menu-backdrop.open {
+  opacity:        1;
+  pointer-events: all;
+}
+
+.menu-box {
+  background: var(--bg);       /* same light tan as the project modal (--bg) */
+  width:      100%;
+  max-width:  380px;           /* ADJUST HERE: this is the box's size — project modals
+                                   are 860px (see .modal max-width), this is deliberately
+                                   thinner. Raise/lower this number to resize the box. */
+  position:   relative;
+  padding:    3rem 2rem;       /* ADJUST HERE: inner spacing (top/bottom, left/right) */
+  transform:  translateY(24px);
+  transition: transform 0.5s var(--trans);
+}
+
+.menu-backdrop.open .menu-box { transform: translateY(0); }
+
+.menu-close {
+  position:        absolute;
+  top:             1rem;
+  right:           1rem;
+  width:           32px;
+  height:          32px;
+  background:      transparent;
+  border:          none;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  font-size:       1rem;
+  font-weight:     300;
+  color:           var(--ink);
+  cursor:          none;
+}
+
+.menu-list {
+  list-style: none;
+  display:    flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.menu-list li {
+  width:         100%;
+  border-bottom: 1px solid var(--line);
+}
+
+.menu-list li:first-child { border-top: 1px solid var(--line); }
+
+.menu-list a {
+  display:        block;
+  padding:        1.15rem 0;
+  font-family:    var(--serif);
+  font-size:      1.3rem;
+  font-weight:    300;
+  font-style:     italic;
+  color:          var(--ink);
+  text-decoration: none;
+  transition:     color 0.2s;
+}
+
+.menu-list a:hover { color: var(--accent); }
+
+
 /* ── HERO ───────────────────────────────────────────────── */
 
 .hero {
@@ -202,7 +324,21 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
 }
 
 @media (max-width: 640px) {
-  .hero-logo-corner { width: 70px; top: 1.6rem; left: 1.5rem; }
+  /* ── Mobile logo: centered, sitting in the gap between the nav bar
+     and the carousel ────────────────────────────────────────────
+     ADJUST HERE:
+     - width: logo size before you scroll (margin-left must stay at
+       -half of this width, or it'll drift off-center)
+     - top: how far below the very top of the page it starts
+     - transform-origin stays "top center" so it shrinks toward its
+       own middle (keeping it centered) as it docks into the nav bar */
+  .hero-logo-corner {
+    width:            56px;
+    top:              4.1rem;
+    left:             50%;
+    margin-left:      -28px;
+    transform-origin: top center;
+  }
 }
 
 /* Extra top margin here clears the fixed, big-format logo in the hero
@@ -249,7 +385,19 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
 }
 
 @media (max-width: 640px) {
-  .hero-carousel-img { height: 92px; }
+  /* ── Mobile hero carousel: single row, kept bigger, centered ──
+     ADJUST HERE:
+     - height below sets the image size
+     - margin-top on .hero-carousel-wrap clears the nav bar + logo above
+       (keep roughly in sync with the logo's "top" + "width" values in
+       the .hero-logo-corner mobile rule below if you change those) */
+  .hero-carousel-img { height: 138px; }
+
+  .hero-carousel-wrap {
+    display:     flex;
+    align-items: center;   /* vertically centers the row in its space */
+    margin-top:  8rem;
+  }
 }
 
 .hero-bg {
@@ -979,6 +1127,24 @@ section { padding: 6rem 3rem; }
 
 @media (max-width: 640px) {
   .contact-cta { white-space: normal; }
+}
+
+@media (max-width: 640px) {
+  /* ── Mobile hero text sizing/position ────────────────────────
+     ADJUST HERE:
+     - .hero-name font-size: raise the two clamp numbers to go bigger
+     - .hero-name margin-top: raise to push "StudioVem" further down
+       (more space between it and the carousel above)
+     - .hero-sub margin-top: raise to push the blurb further down
+       (more space between it and "StudioVem" above) */
+  .hero-name {
+    font-size:  clamp(2.4rem, 10vw, 3.1rem);
+    margin-top: 2rem;
+  }
+
+  .hero-sub {
+    margin-top: 1.75rem;
+  }
 }
 
 
