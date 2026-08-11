@@ -100,7 +100,11 @@ nav.scrolled {
   color:           var(--ink);
   text-decoration: none;
   white-space:     nowrap;
+  margin-left:     0;
+  transition:      margin-left 0.35s var(--trans);
 }
+
+nav.scrolled .nav-logo { margin-left: 2.75rem; }
 
 .nav-links {
   display:    flex;
@@ -137,6 +141,7 @@ nav.scrolled {
   .nav-right { gap: 1rem; }
   .nav-cta   { padding: 0.5rem 0.9rem; font-size: 0.62rem; }
 }
+
 
 .nav-links a {
   font-size:       0.8rem;
@@ -204,6 +209,7 @@ nav.scrolled {
   .nav-links,
   .nav-cta { display: none !important; }
   .nav-hamburger { display: flex !important; }
+   nav.scrolled .nav-logo { margin-left: 0 !important; }
 }
 
 
