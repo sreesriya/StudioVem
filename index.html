@@ -73,6 +73,7 @@
   <div class="hero-carousel-wrap">
     <div class="hero-carousel-track" id="heroCarouselTrack">
       <img class="hero-carousel-img" src="images/SF/business-card.png" alt="Salon Forte" onclick="heroCarouselGoTo('salonforte')">
+      <img class="hero-carousel-img" src="images/Arkron/cover.png" alt="Arkron" onclick="heroCarouselGoTo('arkron')">
       <img class="hero-carousel-img" src="images/VIBE/logo copy.jpg" alt="VIBE Lab" onclick="heroCarouselGoTo('vibe')">
       <img class="hero-carousel-img" src="images/gold/TITLE SLIDE.png" alt="Goldsfield Ghost Town" onclick="heroCarouselGoTo('goldsfield')">
       <img class="hero-carousel-img" src="images/bottleriotcover.png" alt="Bottle Riot" onclick="heroCarouselGoTo('bottleriot')">
@@ -81,6 +82,7 @@
       <img class="hero-carousel-img" src="images/Jiayue Yu/jiyayu mockup1.png" alt="Jiayue Yu" onclick="heroCarouselGoTo('ai')">
       <!-- duplicate set so the marquee loop is seamless -->
       <img class="hero-carousel-img" src="images/SF/business-card.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('salonforte')">
+      <img class="hero-carousel-img" src="images/Arkron/cover.png" alt="Arkron" onclick="heroCarouselGoTo('arkron')">     
       <img class="hero-carousel-img" src="images/VIBE/logo copy.jpg" alt="" aria-hidden="true" onclick="heroCarouselGoTo('vibe')">
       <img class="hero-carousel-img" src="images/gold/TITLE SLIDE.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('goldsfield')">
       <img class="hero-carousel-img" src="images/bottleriotcover.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('bottleriot')">
@@ -257,6 +259,20 @@
       </div>
     </div>
 
+      <!-- Arkron -->
+    <div class="project-card reveal" data-cat="logo design" data-project="arkron"
+      onclick="openModal('arkron')">
+      <div class="project-card-placeholder">
+        <img class="project-card-img" src="images/Arkron/cover.png" alt="Jiayue Yu">
+      </div>
+      <!--<span class="project-card-label">Editorial</span>-->
+      <div class="project-overlay">
+        <p class="project-tag">Brand Identity · Logo Design <span class="project-worktype">· Client Work</span></p>
+        <h3 class="project-name">Arkron</h3>
+        <p class="project-desc">An editorial publication exploring what it means for a short story to be authored by an AI.</p>
+      </div>
+    </div>
+
     <!-- VIBE Lab -->
     <div class="project-card reveal" data-cat="brand-identity typography" data-project="vibe"
       onclick="openModal('vibe')">
@@ -341,7 +357,7 @@
       <div class="project-overlay">
         <p class="project-tag">Editorial Design · Typography <span class="project-worktype">· Course Work</span></p>
         <h3 class="project-name">Jiayue Yu</h3>
-        <p class="project-desc">An editorial publication exploring what it means for a short story to be authored by an AI.</p>
+        <p class="project-desc">An editorial publication displaying the work of the incredible multidisciplinary artist, Jiayue Yu.</p>
       </div>
     </div>
 
@@ -527,7 +543,7 @@
   </div>
   <div class="about-section">
     <div class="about-visual reveal">
-      <img src="images/Vem.png" alt="headshot">
+      <img src="images/headshot.jpg" alt="headshot">
     </div>
     <div class="reveal">
       <div class="about-logo">
@@ -799,7 +815,7 @@ The layout is split between text and imagery, allowing her work to remain centra
   <div class="modal-header">
     <p class="modal-eyebrow">Brand Identity · 2025</p>
     <h2 class="modal-title">VIBE Lab</h2>
-    <p class="modal-worktype">Course Work</p>
+    <p class="modal-worktype">Personal Project</p>
   </div>
   <div class="modal-body">
     <img src="images/VIBE/vibe.jpg" alt="vibe">
@@ -817,6 +833,25 @@ The layout is split between text and imagery, allowing her work to remain centra
       <img src="images/VIBE/post_oct_22-14 copy.jpg">
     </div>
   </div>
+</template>
+
+<!-- ARKRON -->
+<template id="tpl-arkron">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Brand Identity · 2026</p>
+    <h2 class="modal-title">Arkron</h2>
+    <p class="modal-worktype">Client Work</p>
+  </div>
+  <div class="modal-body">
+    <img src="images/Arkron/logo.png" alt="arkron">
+    <p class="modal-section-head">The Challenge</p>
+    <p class="modal-text">Arkron, a tech startup building a suite of three-plus project management apps, needed a single identity that could sit above all of them, something sharp enough to read as serious software, but with a story behind it the founder actually cared about.</p>   
+    <p class="modal-section-head">The Opportunity</p>
+    <p class="modal-text">The name itself was full of raw material: Kronos, the Greek keeper of time, and Arka, the Sanskrit word for the sun, tied to Hindu deities of the sunrise. Layer in "arc," and the name was already pointing toward a mark about time, ascent, and dawn. A fitting metaphor for a company trying to be the next horizon in how people manage their work.</p>
+    <p class="modal-section-head">The Solution</p>
+    <p class="modal-text">Early exploration tested a solid orange disc as the sun, a shape that read too literally on its own, and became something of a running joke, since it kept recalling the story of Hanuman leaping to swallow the rising sun after mistaking it for a mango. The final mark resolved into a sleek sans-serif logotype: the crossbar of the "A" was replaced with an inverted orange arc to read as a horizon line, its peak sharpened into a mountain summit, and a small orange sun placed above and to the left, rising just over the edge it forms.</p>
+    <p class="modal-section-head">The Outcome</p>
+    <p class="modal-text">A single logotype that doubles as an icon, sunrise over a summit. Clean enough to anchor three ideas under one brand, with a piece of mythology folded quietly into the geometry.</div>
 </template>
 
 <!-- Salon Forte -->
@@ -860,6 +895,8 @@ The layout is split between text and imagery, allowing her work to remain centra
     <img src="images/SF/Sf.png">
   </div>
 </template>
+
+
 
 <!-- SCRIPTS -->
 <script>

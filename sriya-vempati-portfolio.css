@@ -347,13 +347,50 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
    corner (.hero-logo-corner) — since that logo is position:fixed, it
    doesn't take up space in this flex flow, so we push the carousel down
    manually instead. Adjust this number if you resize/reposition the logo. */
+ /*  .hero-carousel-wrap {
+  width:       100%;
+  margin:      11.3rem auto 2.5rem;
+  overflow:    hidden;
+  cursor:      none;
+ -webkit-mask-image: linear-gradient(to right, 
+  transparent 0%, 
+  rgba(0,0,0,0.15) 2%, 
+  rgba(0,0,0,0.4) 4%, 
+  rgba(0,0,0,0.7) 6%, 
+  black 9%, 
+  black 91%, 
+  rgba(0,0,0,0.7) 94%, 
+  rgba(0,0,0,0.4) 96%, 
+  rgba(0,0,0,0.15) 98%, 
+  transparent 100%);
+mask-image: linear-gradient(to right, 
+  transparent 0%, 
+  rgba(0,0,0,0.15) 2%, 
+  rgba(0,0,0,0.4) 4%, 
+  rgba(0,0,0,0.7) 6%, 
+  black 9%, 
+  black 91%, 
+  rgba(0,0,0,0.7) 94%, 
+  rgba(0,0,0,0.4) 96%, 
+  rgba(0,0,0,0.15) 98%, 
+  transparent 100%);
+}*/
 .hero-carousel-wrap {
   width:       100%;
   margin:      11.3rem auto 2.5rem;
   overflow:    hidden;
   cursor:      none;
+  mask-image: linear-gradient(to right, 
+  transparent 0%, 
+  rgba(0,0,0,0.4) 12%, 
+  black 30%, 
+  black 70%, 
+  rgba(0,0,0,0.4) 88%, 
+  transparent 100%);
+  
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
           mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+          
 }
 
 @media (max-width: 900px) {
