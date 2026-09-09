@@ -347,34 +347,6 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
    corner (.hero-logo-corner) — since that logo is position:fixed, it
    doesn't take up space in this flex flow, so we push the carousel down
    manually instead. Adjust this number if you resize/reposition the logo. */
- /*  .hero-carousel-wrap {
-  width:       100%;
-  margin:      11.3rem auto 2.5rem;
-  overflow:    hidden;
-  cursor:      none;
- -webkit-mask-image: linear-gradient(to right, 
-  transparent 0%, 
-  rgba(0,0,0,0.15) 2%, 
-  rgba(0,0,0,0.4) 4%, 
-  rgba(0,0,0,0.7) 6%, 
-  black 9%, 
-  black 91%, 
-  rgba(0,0,0,0.7) 94%, 
-  rgba(0,0,0,0.4) 96%, 
-  rgba(0,0,0,0.15) 98%, 
-  transparent 100%);
-mask-image: linear-gradient(to right, 
-  transparent 0%, 
-  rgba(0,0,0,0.15) 2%, 
-  rgba(0,0,0,0.4) 4%, 
-  rgba(0,0,0,0.7) 6%, 
-  black 9%, 
-  black 91%, 
-  rgba(0,0,0,0.7) 94%, 
-  rgba(0,0,0,0.4) 96%, 
-  rgba(0,0,0,0.15) 98%, 
-  transparent 100%);
-}*/
 .hero-carousel-wrap {
   width:       100%;
   margin:      11.3rem auto 2.5rem;
@@ -1772,6 +1744,38 @@ footer a:hover { color: var(--accent); }
   font-size:     1.5rem;
   font-weight:   300;
   margin-bottom: 1rem;
+}
+
+/* Price line for the Services pricing cards */
+.phase-price {
+  display:        flex;
+  flex-wrap:      wrap;
+  align-items:    baseline;
+  gap:            0.5rem;
+  font-family:    var(--serif);
+  font-size:      1.75rem;
+  font-weight:    300;
+  color:          var(--accent);
+  margin-bottom:  1.25rem;
+}
+
+.phase-price-unit {
+  font-family:    var(--sans);
+  font-size:      0.72rem;
+  font-weight:    400;
+  color:          var(--ink2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.phase-addon {
+  flex-basis:     100%;
+  font-family:    var(--sans);
+  font-size:      0.72rem;
+  font-weight:    300;
+  color:          var(--ink3);
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 .phase-list {
