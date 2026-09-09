@@ -1832,6 +1832,7 @@ footer a:hover { color: var(--accent); }
   color:           var(--ink);
   text-decoration: none;
   transition:      background 0.3s, color 0.3s;
+  margin-bottom:   1 rem;
 }
 
 .cta-button:hover {
@@ -1969,6 +1970,44 @@ footer a:hover { color: var(--accent); }
   color:          var(--ink3);
 }
 
+
+/* ── ABOUT: CREDENTIALS ──────────────────────────────────── */
+
+.credentials-block {
+  margin-top:  2rem;
+  padding-top: 2rem;
+  border-top:  1px solid var(--line);
+}
+
+.credentials-heading {
+  font-size:      0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:          var(--accent);
+  margin-bottom:  1.1rem;
+}
+
+.credential-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.credential-item:last-child { border-bottom: none; }
+
+.credential-title {
+  font-family: var(--serif);
+  font-size:   1.05rem;
+  font-weight: 300;
+  color:       var(--ink);
+  line-height: 1.4;
+}
+
+.credential-sub {
+  margin-top:  0.35rem;
+  font-size:   0.8rem;
+  color:       var(--ink2);
+  line-height: 1.6;
+}
 
 /* ── ABOUT: LinkedIn / Resume buttons ───────────────────── */
 
