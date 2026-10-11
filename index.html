@@ -74,6 +74,7 @@
 
   <div class="hero-carousel-wrap">
     <div class="hero-carousel-track" id="heroCarouselTrack">
+      <img class="hero-carousel-img" src="images/Sal/logo-24.png" alt="LDMG" onclick="heroCarouselGoTo('ldmg')">
       <img class="hero-carousel-img" src="images/SF/business-card.png" alt="Salon Forte" onclick="heroCarouselGoTo('salonforte')">
       <img class="hero-carousel-img" src="images/Arkron/cover.png" alt="Arkron" onclick="heroCarouselGoTo('arkron')">
       <img class="hero-carousel-img" src="images/VIBE/logo copy.jpg" alt="VIBE Lab" onclick="heroCarouselGoTo('vibe')">
@@ -83,6 +84,7 @@
       <img class="hero-carousel-img" src="images/work poster.png" alt="Work — Risograph" onclick="heroCarouselGoTo('work')">
       <img class="hero-carousel-img" src="images/Jiayue Yu/jiyayu mockup1.png" alt="Jiayue Yu" onclick="heroCarouselGoTo('ai')">
       <!-- duplicate set so the marquee loop is seamless -->
+      <img class="hero-carousel-img" src="images/Sal/logo-24.png" alt="LDMG" onclick="heroCarouselGoTo('ldmg')">
       <img class="hero-carousel-img" src="images/SF/business-card.png" alt="" aria-hidden="true" onclick="heroCarouselGoTo('salonforte')">
       <img class="hero-carousel-img" src="images/Arkron/cover.png" alt="Arkron" onclick="heroCarouselGoTo('arkron')">     
       <img class="hero-carousel-img" src="images/VIBE/logo copy.jpg" alt="" aria-hidden="true" onclick="heroCarouselGoTo('vibe')">
@@ -99,10 +101,20 @@
   <p class="hero-eyebrow" style="display:none;">Design Portfolio · 2026</p>
   <p class="hero-name"><span class="brand-dark">Studio</span><span class="brand-accent">Vem</span></p>
 
+  <div class="hero-socials">
+    <a href="https://www.instagram.com/studio_vem_?stkn=MWxlYTV1bGZ6NzRv&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hero-social-icon" aria-label="StudioVem on Instagram">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/sreesriyavempati/" target="_blank" rel="noopener noreferrer" class="hero-social-icon" aria-label="Sriya Vempati on LinkedIn">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7.5" y1="10.5" x2="7.5" y2="16.5"/><circle cx="7.5" cy="7" r="0.9" fill="currentColor" stroke="none"/><path d="M11 16.5v-6"/><path d="M11 13c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5v3.5"/></svg>
+    </a>
+  </div>
+
   <div class="hero-scroll">
     <span>Scroll</span>
     <div class="line"></div>
   </div>
+
 </section>
 
 <!-- MARQUEE -->
@@ -249,11 +261,53 @@
     <!--<button class="filter-btn" data-filter="typography"><span>Typography</span></button>-->
     <button class="filter-btn" data-filter="brand-identity"><span>Brand Identity</span></button>
     <button class="filter-btn" data-filter="editorial"><span>Editorial</span></button>
-    <button class="filter-btn" data-filter="animation"><span>Animation</span></button>
+    <button class="filter-btn" data-filter="marketing"><span>Marketing</span></button>
   </div>
 
   <!-- PROJECT GRID -->
   <div class="projects-grid" id="projectGrid">
+
+    <!-- LDMG -->
+    <div class="project-card wide reveal" data-cat="brand-identity" data-project="ldmg"
+       onclick="openModal('ldmg')">
+      <div class="project-card-placeholder">
+        <img class="project-card-img" src="images/Sal/logo-24.png" alt="ldmg">
+      </div>
+      <!--<span class="project-card-label">UX Design</span>-->
+      <div class="project-overlay">
+        <p class="project-tag">Brand Identity <span class="project-worktype">· Client Work</span></p>
+        <h3 class="project-name">LDMG</h3>
+        <p class="project-desc">Brand Identity system made for a client. Hair Stylist, Julia Ayasha was looking for something thats fun with personality yet, professional.</p>
+      </div>
+    </div>
+
+    <!-- Pentl 
+    <div class="project-card reveal" data-cat="marketing" data-project="pentl"
+       onclick="openModal('pentl')">
+      <div class="project-card-placeholder">
+        <span>[ Add Pentl Cover Image ]</span>
+      </div>
+      <div class="project-overlay">
+        <p class="project-tag">Marketing <span class="project-worktype">· Social Media</span></p>
+        <h3 class="project-name">Pentl</h3>
+        <p class="project-desc">Add your project description here.</p>
+      </div>
+    </div>
+    -->
+
+    <!-- Fly Showcase 
+    <div class="project-card reveal" data-cat="marketing" data-project="flyshowcase"
+       onclick="openModal('flyshowcase')">
+      <div class="project-card-placeholder">
+        <span>[ Add Fly Showcase Cover Image ]</span>
+      </div>
+      <div class="project-overlay">
+        <p class="project-tag">Marketing <span class="project-worktype">· Social Media</span></p>
+        <h3 class="project-name">Fly Showcase</h3>
+        <p class="project-desc">Add your project description here.</p>
+      </div>
+    </div>
+    -->
 
     <!-- Salon Forte -->
     <div class="project-card wide reveal" data-cat="brand-identity" data-project="salonforte"
@@ -275,7 +329,7 @@
       <div class="project-card-placeholder">
         <img class="project-card-img" src="images/Arkron/cover.png" alt="Jiayue Yu">
       </div>
-      <!--<span class="project-card-label">Editorial</span>-->
+      <!--<span class="project-card-label">Editorial</span>--> 
       <div class="project-overlay">
         <p class="project-tag">Brand Identity · Logo Design <span class="project-worktype">· Client Work</span></p>
         <h3 class="project-name">Arkron</h3>
@@ -635,7 +689,7 @@
     </div>
     <div class="footer-col">
       <p class="footer-heading">Elsewhere</p>
-      <!-- TODO: replace with your real LinkedIn URL -->
+      <p class="footer-text"><a href="https://www.instagram.com/studio_vem_?stkn=MWxlYTV1bGZ6NzRv&utm_source=qr" target="_blank">Instagram</a></p>
       <p class="footer-text"><a href="https://www.linkedin.com/in/sreesriyavempati/" target="_blank">LinkedIn</a></p>
       <p class="footer-text"><a href="images/resume.pdf" onclick="event.preventDefault(); openModal('resume');">Resume</a></p>
       <p class="footer-text"><a href="https://sreesriyavempati.myportfolio.com/" target="_blank">Original Portfolio</a></p>
@@ -657,6 +711,20 @@
   </div>
 </div>
 
+<!-- LIGHTBOX (single social post viewer, opens on top of a project modal) -->
+<div class="lightbox-backdrop" id="lightboxBackdrop" onclick="closeLightbox(event)">
+  <div class="lightbox" id="lightboxBox">
+    <button class="lightbox-close" onclick="closeLightboxDirect()">✕</button>
+    <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">‹</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+    <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">›</button>
+    <div class="lightbox-meta">
+      <div class="lightbox-dots" id="lightboxDots"></div>
+      <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
+  </div>
+</div>
+
 
 <!-- RESUME -->
 <template id="tpl-resume">
@@ -674,6 +742,130 @@
 </template>
 
 <!-- MODAL TEMPLATES -->
+
+
+<!-- LDMG -->
+<template id="tpl-ldmg">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Brand Identity · 2026</p>
+    <h2 class="modal-title">LDMG</h2>
+    <p class="modal-worktype">Client Work</p>
+  </div>
+   
+  <div class="modal-body">
+    <div class="testimonial-block">
+      <p class="testimonial-label">Testimonial</p>
+      <p class="testimonial-quote">What was it like working with me?
+  It was great working with you. You spent a lot of time understanding the look I wanted and we were able to land on the logos I wanted. You went above and beyond and looked the product I was going to use for the show so you understood what that product would look like with the logos.</p>
+      <p class="testimonial-quote">What stood out most during the design process?
+The iterative process of producing the logos and using my aesthetic preferences to finalize the logos. You produced multiple versions and let me pick the ones that looked the best. You asked why I liked the ones I did so you could create more refined logos.</p>
+      <p class="testimonial-quote">How do you feel about the final designs?
+I loved the final designs. I was looking for a retro look and I think we were able to get what I was looking for.</p>
+      <p class="testimonial-quote">Would you recommend StudioVem to others, and why?
+Yes. In fact I want to continue our current partnership. </p>
+      <cite class="testimonial-cite">— Sal, Owner of LDMG</cite>
+    </div>
+    <img src="images/Sal/logo-24.png">
+    <img src="images/Sal/logo-25.png">
+    <img src="images/Sal/logo-26.png"></div>
+      <div class="modal-body">
+
+    <p class="modal-section-head">Project Outline</p>
+    <p class="modal-text">[ Add your project description here. Describe the brand, the platforms you posted on, and what the marketing goals were — awareness, engagement, sales, etc. ]</p>
+    <p class="modal-section-head">Approach</p>
+    <p class="modal-text">[ Add notes on your content strategy — posting cadence, content pillars, what made this account's voice distinct, and how you approached video vs. static content. ]</p>
+    <p class="modal-section-head">Results</p>
+    <p class="modal-text">[ Add any results you can share — follower growth, engagement rate, reach, or client feedback. ]</p>
+</div>
+    <p class="modal-section-head">Social Media Posts</p>
+    <div class="social-grid">
+      <div class="social-item" data-type="image" onclick="openLightboxFromItem(this)">
+        <img src="images/pentl/post1.jpg" alt="Social post">
+      </div>
+      <div class="social-item" data-type="video" data-src="images/pentl/reel1.mp4" onclick="openLightboxFromItem(this)">
+        <video src="images/pentl/reel1.mp4" muted playsinline preload="metadata"></video>
+        <span class="social-icon">▶</span>
+      </div>
+      <div class="social-item" data-type="carousel"
+           data-images='["images/pentl/carousel1-1.jpg","images/pentl/carousel1-2.jpg","images/pentl/carousel1-3.jpg"]'
+           onclick="openLightboxFromItem(this)">
+        <img src="images/pentl/carousel1-1.jpg" alt="Social post">
+        <span class="social-icon">⧉</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<!-- PENTL -->
+<template id="tpl-pentl">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Marketing · 2026</p>
+    <h2 class="modal-title">Pentl</h2>
+    <p class="modal-worktype">Client Work</p>
+  </div>
+  <div class="modal-body">
+    <div class="modal-image-placeholder">[ Add Pentl hero image ]</div>
+    <p class="modal-section-head">Project Outline</p>
+    <p class="modal-text">[ Add your project description here. Describe the brand, the platforms you posted on, and what the marketing goals were — awareness, engagement, sales, etc. ]</p>
+    <p class="modal-section-head">Approach</p>
+    <p class="modal-text">[ Add notes on your content strategy — posting cadence, content pillars, what made this account's voice distinct, and how you approached video vs. static content. ]</p>
+    <p class="modal-section-head">Results</p>
+    <p class="modal-text">[ Add any results you can share — follower growth, engagement rate, reach, or client feedback. ]</p>
+
+    <p class="modal-section-head">Social Media Posts</p>
+    <div class="social-grid">
+      <div class="social-item" data-type="image" onclick="openLightboxFromItem(this)">
+        <img src="images/pentl/post1.jpg" alt="Social post">
+      </div>
+      <div class="social-item" data-type="video" data-src="images/pentl/reel1.mp4" onclick="openLightboxFromItem(this)">
+        <video src="images/pentl/reel1.mp4" muted playsinline preload="metadata"></video>
+        <span class="social-icon">▶</span>
+      </div>
+      <div class="social-item" data-type="carousel"
+           data-images='["images/pentl/carousel1-1.jpg","images/pentl/carousel1-2.jpg","images/pentl/carousel1-3.jpg"]'
+           onclick="openLightboxFromItem(this)">
+        <img src="images/pentl/carousel1-1.jpg" alt="Social post">
+        <span class="social-icon">⧉</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- FLY SHOWCASE -->
+<template id="tpl-flyshowcase">
+  <div class="modal-header">
+    <p class="modal-eyebrow">Marketing · 2026</p>
+    <h2 class="modal-title">Fly Showcase</h2>
+    <p class="modal-worktype">Client Work</p>
+  </div>
+  <div class="modal-body">
+    <div class="modal-image-placeholder">[ Add Fly Showcase hero image ]</div>
+    <p class="modal-section-head">Project Outline</p>
+    <p class="modal-text">[ Add your project description here. Describe the brand, the platforms you posted on, and what the marketing goals were — awareness, engagement, sales, etc. ]</p>
+    <p class="modal-section-head">Approach</p>
+    <p class="modal-text">[ Add notes on your content strategy — posting cadence, content pillars, what made this account's voice distinct, and how you approached video vs. static content. ]</p>
+    <p class="modal-section-head">Results</p>
+    <p class="modal-text">[ Add any results you can share — follower growth, engagement rate, reach, or client feedback. ]</p>
+
+    <p class="modal-section-head">Social Media Posts</p>
+    <div class="social-grid">
+      <div class="social-item" data-type="image" onclick="openLightboxFromItem(this)">
+        <img src="images/flyshowcase/post1.jpg" alt="Social post">
+      </div>
+      <div class="social-item" data-type="video" data-src="images/flyshowcase/reel1.mp4" onclick="openLightboxFromItem(this)">
+        <video src="images/flyshowcase/reel1.mp4" muted playsinline preload="metadata"></video>
+        <span class="social-icon">▶</span>
+      </div>
+      <div class="social-item" data-type="carousel"
+           data-images='["images/flyshowcase/carousel1-1.jpg","images/flyshowcase/carousel1-2.jpg","images/flyshowcase/carousel1-3.jpg"]'
+           onclick="openLightboxFromItem(this)">
+        <img src="images/flyshowcase/carousel1-1.jpg" alt="Social post">
+        <span class="social-icon">⧉</span>
+      </div>
+    </div>
+  </div>
+</template>
 
 <!-- GOLDSFIELD -->
 <template id="tpl-goldsfield">
@@ -852,12 +1044,21 @@ The layout is split between text and imagery, allowing her work to remain centra
     <p class="modal-text">The research focused on how creative communities and design-focused social spaces currently operate, and where they often create pressure instead of support. Many existing platforms rely on highly polished, dense, or trend-driven visuals that can unintentionally reinforce comparison and burnout. This led to reframing Vibe Lab as more of an emotional and creative environment rather than a traditional brand system. Inspiration was pulled from editorial design, zines, and collage-based layouts, where layering, imperfection, and variation create warmth and authenticity while still maintaining a sense of structure.</p>
     <p class="modal-section-head">Design Direction</p>
     <p class="modal-text">The final design direction is built around a flexible collage system that prioritizes variation within consistency. Instead of fixed templates, layouts adapt depending on content, while cohesion is maintained through recurring visual elements like a pastel palette derived from the logo and soft paper textures that add tactility and warmth. Typography is intentionally restrained to support clarity and emotional ease, allowing composition and imagery to lead. The overall system reflects the core idea of Vibe Lab: creativity is fluid, personal, and evolving, and the identity should feel the same way.</p>
-    <p class="modal-section-head">First Instagram Post:</p>
-    <div class="modal-image-grid">
-      <img src="images/VIBE/post_oct_22-11 copy.jpg">
-      <img src="images/VIBE/post_oct_22-12 copy.jpg">
-      <img src="images/VIBE/post_oct_22-13 copy.jpg">
-      <img src="images/VIBE/post_oct_22-14 copy.jpg">
+
+    <p class="modal-section-head">Social Media Posts</p>
+    <div class="social-grid">
+      <div class="social-item" data-type="image" onclick="openLightboxFromItem(this)">
+        <img src="images/VIBE/post_oct_22-11 copy.jpg" alt="Social post">
+      </div>
+      <div class="social-item" data-type="image" onclick="openLightboxFromItem(this)">
+        <img src="images/VIBE/post_oct_22-12 copy.jpg" alt="Social post">
+      </div>
+      <div class="social-item" data-type="image" onclick="openLightboxFromItem(this)">
+        <img src="images/VIBE/post_oct_22-13 copy.jpg" alt="Social post">
+      </div>
+      <div class="social-item" data-type="image" onclick="openLightboxFromItem(this)">
+        <img src="images/VIBE/post_oct_22-14 copy.jpg" alt="Social post">
+      </div>
     </div>
   </div>
 </template>
@@ -1122,6 +1323,130 @@ The layout is split between text and imagery, allowing her work to remain centra
     });
   });
 
+  // ── SOCIAL MEDIA POSTS (per project, edited directly in each template) ──
+  // Each project's modal template has its own <div class="social-grid">
+  // with plain HTML .social-item entries — no shared/global list. Add,
+  // remove, or reorder items directly in that project's <template> in the
+  // HTML above; nothing here needs to change.
+  //
+  //   type="image"     -> just an <img>, click opens it full-size.
+  //   type="video"     -> a <video> tag (muted, no controls — the lightbox
+  //                       adds controls when clicked); data-src points at
+  //                       the same file as the <video src="...">.
+  //   type="carousel"  -> the FIRST image shows as the grid thumbnail;
+  //                       data-images holds the full ordered list as a
+  //                       JSON array so the lightbox can step through all
+  //                       of them.
+  //
+  // Copy an existing .social-item block from any template to add a post to
+  // that project.
+
+  function parseSocialItem(item) {
+    const type = item.dataset.type || 'image';
+    if (type === 'video') {
+      return { type, src: item.dataset.src };
+    }
+    if (type === 'carousel') {
+      return { type, images: JSON.parse(item.dataset.images) };
+    }
+    const img = item.querySelector('img');
+    return { type: 'image', full: item.dataset.full || (img && img.getAttribute('src')) };
+  }
+
+  // ── LIGHTBOX STATE + LOGIC ─────────────────────────────────
+  let currentLightbox = { items: [], index: 0, carouselIndex: 0 };
+
+  function openLightboxFromItem(itemEl) {
+    const grid = itemEl.closest('.social-grid');
+    if (!grid) return;
+    const items = Array.from(grid.querySelectorAll('.social-item'));
+    currentLightbox = { items, index: items.indexOf(itemEl), carouselIndex: 0 };
+    renderLightbox();
+    document.getElementById('lightboxBackdrop').classList.add('open');
+  }
+
+  function renderLightbox() {
+    const { items, index, carouselIndex } = currentLightbox;
+    const post = parseSocialItem(items[index]);
+    const content = document.getElementById('lightboxContent');
+    const counter = document.getElementById('lightboxCounter');
+    const dotsWrap = document.getElementById('lightboxDots');
+
+    if (post.type === 'video') {
+      content.innerHTML = `<video src="${post.src}" controls autoplay playsinline></video>`;
+      dotsWrap.innerHTML = '';
+    } else if (post.type === 'carousel') {
+      content.innerHTML = `<img src="${post.images[carouselIndex]}" alt="Post image">`;
+      dotsWrap.innerHTML = post.images.map((_, i) =>
+        `<span class="lightbox-dot ${i === carouselIndex ? 'active' : ''}"></span>`
+      ).join('');
+    } else {
+      content.innerHTML = `<img src="${post.full}" alt="Post image">`;
+      dotsWrap.innerHTML = '';
+    }
+
+    counter.textContent = `Post ${index + 1} of ${items.length}`;
+    attachCursorExpand(document.getElementById('lightboxBox'));
+  }
+
+  // Left/right arrows: step through a carousel's own images first;
+  // once at the carousel's edge (or for image/video posts), move to the next/prev post in the grid.
+  function navLightbox(dir) {
+    const { items, index } = currentLightbox;
+    const post = parseSocialItem(items[index]);
+
+    if (post.type === 'carousel') {
+      const next = currentLightbox.carouselIndex + dir;
+      if (next >= 0 && next < post.images.length) {
+        currentLightbox.carouselIndex = next;
+        renderLightbox();
+        return;
+      }
+    }
+
+    let newIndex = index + dir;
+    if (newIndex < 0) newIndex = items.length - 1;
+    if (newIndex >= items.length) newIndex = 0;
+    currentLightbox.index = newIndex;
+    currentLightbox.carouselIndex = 0;
+    renderLightbox();
+  }
+
+  function closeLightbox(e) {
+    if (e.target === document.getElementById('lightboxBackdrop')) closeLightboxDirect();
+  }
+  function closeLightboxDirect() {
+    document.getElementById('lightboxBackdrop').classList.remove('open');
+    document.getElementById('lightboxContent').innerHTML = ''; // stops video playback
+  }
+
+  // ── Lightbox swipe (mobile) ─────────────────────────────────
+  // Arrow buttons are hidden on mobile (see CSS); a horizontal swipe on the
+  // post itself calls navLightbox() instead, same as tapping an arrow would.
+  (function initLightboxSwipe() {
+    const el = document.getElementById('lightboxContent');
+    if (!el) return;
+    let startX = 0, startY = 0, tracking = false;
+    const SWIPE_THRESHOLD = 45; // px — must beat this, and beat vertical movement, to count as a swipe
+
+    el.addEventListener('touchstart', e => {
+      if (e.touches.length !== 1) return;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      tracking = true;
+    }, { passive: true });
+
+    el.addEventListener('touchend', e => {
+      if (!tracking) return;
+      tracking = false;
+      const dx = e.changedTouches[0].clientX - startX;
+      const dy = e.changedTouches[0].clientY - startY;
+      if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy)) {
+        navLightbox(dx < 0 ? 1 : -1); // swipe left -> next, swipe right -> prev
+      }
+    }, { passive: true });
+  })();
+
   // ── Modal ────────────────────────────────────────────────────
   function openModal(id) {
     const tpl = document.getElementById('tpl-' + id);
@@ -1143,9 +1468,23 @@ The layout is split between text and imagery, allowing her work to remain centra
   function closeModalDirect() {
     document.getElementById('modalBackdrop').classList.remove('open');
     document.body.style.overflow = '';
+    closeLightboxDirect();
   }
 
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModalDirect(); closeMenuDirect(); } });
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    const lightboxOpen = document.getElementById('lightboxBackdrop').classList.contains('open');
+    if (lightboxOpen) { closeLightboxDirect(); return; }
+    closeModalDirect();
+    closeMenuDirect();
+  });
+
+  document.addEventListener('keydown', e => {
+    const lightboxOpen = document.getElementById('lightboxBackdrop').classList.contains('open');
+    if (!lightboxOpen) return;
+    if (e.key === 'ArrowLeft')  navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
+  });
 
   // ── FAQ accordion ────────────────────────────────────────────
   document.querySelectorAll('.faq-q').forEach(btn => {

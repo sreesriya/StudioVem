@@ -476,6 +476,40 @@ nav.scrolled .nav-logo { margin-left: 2.75rem; }
   animation:   fadeup 0.8s var(--trans) 0.8s forwards;
 }
 
+/* ── HERO: SOCIAL ICONS (under the StudioVem wordmark) ──── */
+
+.hero-socials {
+  display:        flex;
+  align-items:    center;
+  justify-content: center;
+  gap:            1rem;
+  margin-top:     1.75rem;
+  opacity:        0;
+  transform:      translateY(20px);
+  animation:      fadeup 0.8s var(--trans) 1s forwards;
+}
+
+.hero-social-icon {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  width:           44px;
+  height:          44px;
+  border-radius:   50%;
+  background:      var(--accent);
+  color:           var(--bg);
+  text-decoration: none;
+  cursor:          none;
+  transition:      background 0.25s var(--trans), transform 0.25s var(--trans);
+}
+
+.hero-social-icon svg { display: block; }
+
+.hero-social-icon:hover {
+  background: var(--ink);
+  transform:  translateY(-3px);
+}
+
 .hero-scroll {
   position:       absolute;
   bottom:         3rem;
@@ -1155,6 +1189,15 @@ section { padding: 6rem 3rem; }
 
   .hero-sub {
     margin-top: 1.75rem;
+  }
+
+  .hero-socials {
+    margin-top: 1.5rem;
+  }
+
+  .hero-social-icon {
+    width:  40px;
+    height: 40px;
   }
 }
 
@@ -2044,4 +2087,187 @@ footer a:hover { color: var(--accent); }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color:          var(--accent);
+}
+
+
+/* ── SOCIAL MEDIA GRID (inside project modal) ───────────── */
+
+.social-grid {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:                   3px;
+  margin-top:            1rem;
+  margin-bottom:         1rem;
+}
+
+.social-item {
+  position:     relative;
+  aspect-ratio: 1 / 1;
+  overflow:     hidden;
+  cursor:       none;
+  background:   var(--bg2);
+}
+
+.social-item img,
+.social-item video {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  border-radius: 0;
+  margin-bottom: 0;
+  transition: transform 0.4s var(--trans);
+  pointer-events: none; /* clicks go to the .social-item wrapper, not the video's native controls */
+}
+
+.social-item:hover img,
+.social-item:hover video { transform: scale(1.06); }
+
+.social-icon {
+  position:    absolute;
+  top:         8px;
+  right:       8px;
+  color:       #fff;
+  font-size:   0.95rem;
+  line-height: 1;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+@media (max-width: 768px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap:                   10px;
+  }
+
+  .social-item { aspect-ratio: 1 / 1; }
+}
+
+
+/* ── LIGHTBOX (single social post viewer) ────────────────── */
+
+.lightbox-backdrop {
+  position:        fixed;
+  inset:           0;
+  background:      rgba(10, 9, 7, 0.96);
+  z-index:         300;
+  opacity:         0;
+  pointer-events:  none;
+  transition:      opacity 0.35s var(--trans);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  padding:         2rem;
+}
+
+.lightbox-backdrop.open {
+  opacity:        1;
+  pointer-events: all;
+}
+
+.lightbox {
+  position:       relative;
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  max-width:      92vw;
+}
+
+.lightbox-content {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width:     90vw;
+  max-height:    78vh;
+  display:       block;
+  background:    #000;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.lightbox-close {
+  position:   absolute;
+  top:        -3rem;
+  right:      -0.5rem;
+  background: transparent;
+  border:     none;
+  color:      #F5F3EE;
+  font-size:  1.4rem;
+  cursor:     none;
+  opacity:    0.7;
+  transition: opacity 0.2s;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+.lightbox-nav {
+  position:        absolute;
+  top:             50%;
+  transform:       translateY(-50%);
+  background:      rgba(245, 243, 238, 0.08);
+  border:          1px solid rgba(245, 243, 238, 0.2);
+  color:           #F5F3EE;
+  font-size:       1.6rem;
+  width:           44px;
+  height:          44px;
+  border-radius:   50%;
+  cursor:          none;
+  transition:      background 0.2s;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  z-index:         2;
+}
+
+.lightbox-nav:hover { background: rgba(245, 243, 238, 0.22); }
+.lightbox-prev { left: -1.5rem; }
+.lightbox-next { right: -1.5rem; }
+
+.lightbox-meta {
+  margin-top:     1.1rem;
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            0.6rem;
+}
+
+.lightbox-counter {
+  color:          rgba(245, 243, 238, 0.55);
+  font-size:      0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .lightbox-counter::before {
+    content: '‹ swipe ›';
+    display: block;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    color: rgba(245, 243, 238, 0.35);
+    margin-bottom: 0.35rem;
+  }
+}
+
+.lightbox-dots {
+  display: flex;
+  gap:     6px;
+}
+
+.lightbox-dot {
+  width:         6px;
+  height:        6px;
+  border-radius: 50%;
+  background:    rgba(245, 243, 238, 0.3);
+  transition:    background 0.2s;
+}
+
+.lightbox-dot.active { background: var(--accent2); }
+
+@media (max-width: 768px) {
+  .lightbox-nav   { display: none; } /* replaced by swipe on touch devices — see initLightboxSwipe() */
+  .lightbox-close { top: -2.5rem; right: 0; }
 }
