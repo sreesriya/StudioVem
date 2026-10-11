@@ -1628,7 +1628,86 @@ The layout is split between text and imagery, allowing her work to remain centra
     ui();
   }
 
+// Draggable marquee with momentum
+(function () {
+  const wrap = document.querySelector('.marquee-wrap');
+  const track = document.querySelector('.marquee');
+  if (!wrap || !track) return;
+
+  const AUTO_SPEED   = -50;   // px/sec when idle (negative = moves left)
+  const RESUME_DELAY = 1000;  // ms after release before auto-scroll eases back in
+  const FRICTION     = 3;     // higher = coasts for a shorter time
+  const MAX_FLICK    = 2500;  // px/sec cap on throw speed
+
+  let x = 0, vel = AUTO_SPEED;
+  let dragging = false, lastX = 0, lastMoveT = 0, resumeAt = 0, lastFrame = performance.now();
+  let period = 0;
+
+  // One full set of items = distance from first item to the first item of the duplicate set
+  function measure() {
+    const half = track.children.length / 2;
+    period = track.children[half].offsetLeft - track.children[0].offsetLeft;
+  }
+  measure();
+  window.addEventListener('resize', measure);
+  window.addEventListener('load', measure); // fonts can change widths
+
+  wrap.addEventListener('pointerdown', e => {
+    dragging = true;
+    lastX = e.clientX;
+    lastMoveT = performance.now();
+    vel = 0;
+    wrap.setPointerCapture(e.pointerId);
+  });
+
+  wrap.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    const now = performance.now();
+    const dx = e.clientX - lastX;
+    const dt = Math.max(now - lastMoveT, 1) / 1000;
+    x += dx;
+    vel = 0.7 * vel + 0.3 * (dx / dt);   // smoothed finger speed
+    lastX = e.clientX;
+    lastMoveT = now;
+  });
+
+  function release() {
+    if (!dragging) return;
+    dragging = false;
+    // If the finger paused before lifting, don't fling
+    if (performance.now() - lastMoveT > 100) vel = 0;
+    vel = Math.max(-MAX_FLICK, Math.min(MAX_FLICK, vel));
+    resumeAt = performance.now() + RESUME_DELAY;
+  }
+  wrap.addEventListener('pointerup', release);
+  wrap.addEventListener('pointercancel', release);
+
+  function frame(now) {
+    const dt = Math.min((now - lastFrame) / 1000, 0.05);
+    lastFrame = now;
+
+    if (!dragging) {
+      if (now < resumeAt) {
+        vel *= Math.exp(-FRICTION * dt);                       // coast and slow down
+      } else {
+        vel += (AUTO_SPEED - vel) * (1 - Math.exp(-2 * dt));   // ease back to idle speed
+      }
+      x += vel * dt;
+    }
+
+    // Seamless wrap
+    if (period) {
+      x = x % period;
+      if (x > 0) x -= period;
+    }
+    track.style.transform = `translate3d(${x}px, 0, 0)`;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
 </script>
+
 
 <!-- Calendly widget script (powers the popup used by the Book a Call / CTA buttons) -->
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>

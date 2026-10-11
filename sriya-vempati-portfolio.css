@@ -2271,3 +2271,14 @@ footer a:hover { color: var(--accent); }
   .lightbox-nav   { display: none; } /* replaced by swipe on touch devices — see initLightboxSwipe() */
   .lightbox-close { top: -2.5rem; right: 0; }
 }
+.marquee {
+  display:     flex;
+  gap:         3rem;
+  white-space: nowrap;
+  width:       max-content;
+
+  /* new */
+  will-change:  transform;
+  touch-action: pan-y;      /* page still scrolls vertically, horizontal drag goes to the marquee */
+  user-select:  none;
+}
