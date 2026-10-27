@@ -1,0 +1,282 @@
+/* ============================================================
+   StudioVem — Open Studio page
+   stylesheet: openstudio/openstudio.css
+   Loads AFTER sriya-vempati-portfolio.css and reuses its
+   variables (--bg, --ink, --accent, --serif, --sans, --trans…)
+   ============================================================ */
+
+
+/* ── NAV (this page has no hero logo to make room for) ───── */
+
+nav.scrolled .nav-logo { margin-left: 0; }
+
+
+/* ── PAGE LAYOUT ─────────────────────────────────────────── */
+
+.os-page {
+  padding-top: 9rem;          /* clears the fixed nav */
+  min-height:  100vh;
+}
+
+/* Everything on the page (heading, intro, form, thank-you) lives in one
+   centered column. Change 720px to make the column wider or narrower. */
+.os-page > * {
+  max-width:    720px;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+.os-intro {
+  margin-bottom: 3.5rem;
+}
+
+.os-form {
+  display:   grid;
+  gap:       2.75rem;
+}
+
+/* Two questions side by side (contact info) */
+.q-row {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   2.75rem 2.5rem;
+}
+
+/* Section headings inside the form */
+.group-title {
+  margin-top:     0.5rem;
+  padding-top:    1.75rem;
+  border-top:     1px solid var(--line);
+  font-family:    var(--serif);
+  font-style:     italic;
+  font-weight:    300;
+  font-size:      clamp(1.4rem, 3vw, 1.9rem);
+  color:          var(--ink);
+}
+
+.req-note + .group-title {
+  margin-top:  0;
+  padding-top: 0;
+  border-top:  0;
+}
+
+
+/* ── QUESTIONS ───────────────────────────────────────────── */
+
+.q { border: 0; min-width: 0; }
+
+.q-label {
+  display:        block;
+  font-size:      0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color:          var(--accent);
+  margin-bottom:  0.6rem;
+  padding:        0;
+}
+
+.q-hint {
+  font-size:     0.85rem;
+  color:         var(--ink3);
+  margin-bottom: 0.9rem;
+}
+
+/* TEXT QUESTIONS (short + long) */
+.q-text,
+.q-textarea {
+  width:         100%;
+  padding:       0.75rem 0;
+  font-family:   var(--serif);
+  font-size:     1.25rem;
+  font-weight:   300;
+  color:         var(--ink);
+  background:    transparent;
+  border:        none;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  outline:       none;
+  cursor:        none;
+  -webkit-appearance: none;
+  appearance:    none;
+  transition:    border-color 0.3s var(--trans);
+}
+
+.q-textarea { resize: vertical; min-height: 120px; }
+
+.q-text:focus,
+.q-textarea:focus { border-bottom-color: var(--accent); }
+
+/* "Other" text box that appears when Other is picked */
+.other-input          { margin-top: 1rem; }
+.other-input[hidden]  { display: none; }
+
+/* MULTIPLE CHOICE
+   radio    = pick one
+   checkbox = pick many                                      */
+.choices {
+  display:        flex;
+  flex-direction: column;       /* options stacked vertically */
+  gap:            0.5rem;
+}
+
+.choice {
+  position: relative;
+  cursor:   none;
+}
+
+.choice input {
+  position: absolute;
+  inset:    0;
+  width:    100%;
+  height:   100%;
+  margin:   0;
+  opacity:  0;
+  cursor:   none;
+}
+
+.choice span {
+  display:        block;
+  padding:        0.6rem 1.1rem;
+  border:         1px solid var(--line);
+  font-size:      0.8rem;
+  letter-spacing: 0.06em;
+  color:          var(--ink2);
+  transition:     background 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.choice:hover span { border-color: var(--ink); }
+
+.choice input:checked + span {
+  background:   var(--ink);
+  border-color: var(--ink);
+  color:        var(--bg);
+}
+
+.choice input:focus-visible + span {
+  outline:        2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Greyed out once the "select up to N" limit is reached */
+.choice:has(input:disabled) span        { opacity: 0.35; }
+.choice:has(input:disabled):hover span  { border-color: var(--line); }
+
+
+/* ── REQUIRED MARKER ─────────────────────────────────────── */
+
+.req-note {
+  font-size:      0.8rem;
+  letter-spacing: 0.02em;
+  color:          var(--ink2);
+  margin-bottom:  -1.5rem;      /* tightens the gap to the first heading */
+}
+
+.req-star { color: var(--accent); font-weight: 500; }
+
+/* Automatic star: any question with a "required" input, plus the
+   pick-at-least-one checkbox groups, gets a star */
+.q:has([required]) .q-label::after,
+.q[data-checks] .q-label::after {
+  content:        "*";
+  content:        "*" / "";      /* screen readers skip it; "required" already announces it */
+  margin-left:    0.3em;
+  font-size:      1.15em;
+  letter-spacing: 0;
+  font-weight:    500;
+  color:          var(--accent);
+}
+
+
+/* ── BUTTONS + STATUS ────────────────────────────────────── */
+
+.form-actions {
+  display:     flex;
+  flex-wrap:   wrap;
+  gap:         1rem;
+  align-items: center;
+}
+
+/* Solid submit button (the outlined one is your existing .cta-button) */
+.os-submit {
+  display:        inline-block;
+  padding:        1rem 2rem;
+  background:     var(--ink);
+  color:          var(--bg);
+  border:         1px solid var(--ink);
+  font-family:    var(--sans);
+  font-size:      0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor:         none;
+  transition:     background 0.3s, border-color 0.3s;
+}
+
+.os-submit:hover {
+  background:   var(--accent);
+  border-color: var(--accent);
+}
+
+.os-submit:disabled { opacity: 0.6; }
+
+.form-status {
+  font-family: var(--serif);
+  font-style:  italic;
+  font-size:   1.05rem;
+  color:       var(--ink2);
+}
+
+
+/* ── THANK-YOU MESSAGE ───────────────────────────────────── */
+
+.thanks {
+  display: none;
+}
+
+.thanks.show {
+  display:   block;
+  opacity:   0;
+  transform: translateY(20px);
+  animation: fadeup 0.8s var(--trans) forwards;   /* fadeup lives in the main stylesheet */
+}
+
+.thanks-title {
+  font-family:    var(--serif);
+  font-size:      clamp(2rem, 5vw, 3.5rem);
+  font-weight:    300;
+  line-height:    1.05;
+  letter-spacing: -0.02em;
+}
+
+.thanks-title em {
+  font-style: italic;
+  color:      var(--accent);
+}
+
+.thanks-text {
+  margin:      1.25rem 0 2rem;
+  line-height: 1.7;
+  color:       var(--ink2);
+}
+
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .os-page {
+    padding-top:   7rem;
+    padding-left:  1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .os-form { gap: 2.25rem; }
+
+  .q-row   { grid-template-columns: 1fr; gap: 2.25rem; }
+
+  .req-note { margin-bottom: -1.1rem; }
+
+  .form-actions {
+    flex-direction: column;
+    align-items:    stretch;
+    text-align:     center;
+  }
+}

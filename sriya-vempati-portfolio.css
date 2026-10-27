@@ -1784,7 +1784,7 @@ footer a:hover { color: var(--accent); }
 
 .phase-q {
   font-family:   var(--serif);
-  font-size:     1.25 rem;
+  font-size:     1.25rem;
   font-weight:   300;
   margin-bottom: 1.5rem;
   color:#5A5650
@@ -1875,7 +1875,7 @@ footer a:hover { color: var(--accent); }
   color:           var(--ink);
   text-decoration: none;
   transition:      background 0.3s, color 0.3s;
-  margin-bottom:   1 rem;
+  margin-bottom:   1rem;
 }
 
 .cta-button:hover {
