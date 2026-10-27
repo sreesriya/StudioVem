@@ -196,23 +196,7 @@ nav.scrolled .nav-logo { margin-left: 0; }
   align-items: center;
 }
 .form-actions .os-submit,
-.form-actions .cta-button {
-  display:         inline-flex;
-  align-items:     center;
-  justify-content: center;
-  box-sizing:      border-box;
-  min-height:      3.4rem;
-  padding:         0 2.25rem;
-  margin:          0;
-  font-family:     var(--sans);
-  font-size:       0.78rem;
-  font-weight:     400;
-  line-height:     1;
-  letter-spacing:  0.1em;
-  text-transform:  uppercase;
-  text-decoration: none;
-  border:          1px solid var(--ink);
-}
+
 /* Solid submit button (the outlined one is your existing .cta-button) */
 .os-submit {
   display:        inline-block;
